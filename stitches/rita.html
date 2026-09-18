@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Förbättrad virktextur på Canvas</title>
+    <style>
+        body { background-color: #ffffff; font-family: sans-serif; text-align: center; }
+        canvas { border: 1px solid #ccc; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+
+    <h2>Förbättrad flätad virkstruktur</h2>
+    <canvas id="crochetCanvas" width="600" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('crochetCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // --- INSTÄLLNINGAR FÖR TYGET ---
+        const maskBredd = 36;  // Bredden på varje V-maska
+        const maskHojd = 30;   // Höjden på varje V-maska
+        const radAvstand = 16; // VIKTIGT: Mindre än höjden så att raderna överlappar varandra nedåt!
+        const kolAvstand = 32; // Mindre än bredden så att maskorna går omlott i sidled
+
+        // Funktion som ritar en klassisk virkad "V-maska"
+        function ritaFlatMaska(x, y) {
+            ctx.save();
+            ctx.strokeStyle = '#333333';
+            ctx.lineWidth = 2;
+            ctx.fillStyle = '#ffffff'; // Vit fyllning så de döljer maskorna bakom
+            ctx.lineJoin = 'round';
+
+            // Vänster ögla av V-et
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.bezierCurveTo(x - maskBredd/2, y + maskHojd*0.3, x - maskBredd/3, y + maskHojd, x, y + maskHojd);
+            ctx.bezierCurveTo(x + maskBredd/4, y + maskHojd*0.6, x - maskBredd/6, y + maskHojd*0.2, x, y);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+
+            // Höger ögla av V-et
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.bezierCurveTo(x + maskBredd/2, y + maskHojd*0.3, x + maskBredd/3, y + maskHojd, x, y + maskHojd);
+            ctx.bezierCurveTo(x - maskBredd/4, y + maskHojd*0.6, x + maskBredd/6, y + maskHojd*0.2, x, y);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.restore();
+        }
+
+        // --- 1. RITA STYCKET (NERIFRÅN OCH UPP) ---
+        const startX = 40;
+        const startY = 220; // Vi börjar lingo ner på canvasen
+        const antalRader = 4;
+        const antalKolumner = 12;
+
+        // Vi loopar rader baklänges (nerifrån och upp) så att de övre maskorna lägger sig OVANPÅ de undre
+        for (let r = antalRader - 1; r >= 0; r--) {
+            // Varannan rad förskjuts i sidled för att skapa sicksack-mönstret i ett virkat stycke
+            let xOffset = (r % 2 === 0) ? 0 : kolAvstand / 2;
+            let nuvarandeY = startY - (r * radAvstand);
+
+            for (let k = 0; k < antalKolumner; k++) {
+                let nuvarandeX = startX + (k * kolAvstand) + xOffset;
+                ritaFlatMaska(nuvarandeX, nuvarandeY);
+            }
+        }
+
+        // --- 2. RITA VIRKNÅLEN OCH DET AKTIVA GARNET ---
+        // (Här återanvänder du din befintliga kod för nålen, tråden och pilen)
+        // Du kan justera deras X och Y så att de landar perfekt på den översta maskraden!
+
+        // Exempel på din nål (justerad i position för att matcha det nya tyget):
+        ctx.save();
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 2;
+        ctx.fillStyle = '#ffe875'; // Gul nål
+
+        ctx.translate(220, 160); // Flytta hela nål-systemet till rätt plats
+        ctx.rotate(-Math.PI / 10); // Svag vinkel på nålen
+
+        // Nål-form
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 40);
+        ctx.lineTo(195, 55);
+        ctx.lineTo(-5, 15);
+        ctx.bezierCurveTo(-25, 10, -30, -10, -10, -10);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+
+        // Arbetstråd (Svart/Grön tråd uppåt)
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 6;
+        ctx.beginPath();
+        ctx.moveTo(230, 163);
+        ctx.bezierCurveTo(220, 110, 210, 60, 215, 20);
+        ctx.stroke();
+
+    </script>
+</body>
+</html>
