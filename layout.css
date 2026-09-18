@@ -3353,14 +3353,26 @@ input[type="checkbox"]:focus {
     outline-offset: -2px
 }
 
-output {
-    display: block;
+#output {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     padding-top: 7px;
     font-size: 14px;
     line-height: 1.42857143;
     color: #555
 }
-
+td #output{
+    vertical-align:top;
+}
+td #goback{
+  vertical-align:bottom;
+   text-align: right;
+   width: 30px;
+   height: 30px;
+}
+#goback img { width: 30px !important;
+   height: auto;  }
 .form-control {
     display: block;
     width: 100%;
@@ -9345,6 +9357,7 @@ input.hideArrows[type=number] {
 }
 
 #pg {
+    margin-top: 60px;
     padding-bottom: 15px;
     font-size: 18px;
     line-height: 150%;
@@ -9398,7 +9411,7 @@ input.hideArrows[type=number] {
 }
 
 #pg img {
-    max-width: 100%;
+    max-width: 50%;
     border: 1px solid #888
 }
 

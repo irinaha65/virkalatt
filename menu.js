@@ -34,9 +34,23 @@ function visaMaskar () {
     tr.appendChild(td2)
     let td3 = document.createElement('td')
     td3.innerHTML = element.name
-    tr.appendChild(td3)
+    tr.appendChild(td3)   
+       goback.addEventListener("click", function (event) {
+
+                        event.preventDefault();
+
+
+                       
+                    });
     tr.addEventListener('click', () => {
       showDesc( element.desc + '.docx')
+         goback.addEventListener("click", function (event) {
+
+                        event.preventDefault();
+
+
+                        showDesc(element.desc + '.docx');
+                    });
     })
     table.appendChild(tr)
   })
@@ -75,13 +89,6 @@ function showDesc (doc) {
                         // Ta bort eventuell sökväg
                         var filnamn = href.split("/").pop();
 
-                        // Ta bort .docx
-                     /*   var nyttDokument =
-                            filnamn.substring(
-                                0,
-                                filnamn.length - 5
-                            );*/
-
                         showDesc(filnamn);
                     });
                 }
@@ -89,7 +96,11 @@ function showDesc (doc) {
     })
     .catch(function (err) {
       console.error('Ett fel uppstod:', err)
+      output.innerHTML = '<p>Ett fel uppstod vid hämtning av dokumentet.</p>'
     })
+    
+
+   window.location = "#output";
 }
 
  visaMaskar ();

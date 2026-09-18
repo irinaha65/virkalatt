@@ -319,8 +319,8 @@ let maskar = [
 </path>
 `,
     abbr: '3dc shell',
-    desc: ' ',
-    name: '3 double crochet shell'
+    desc: '3_stolpe_shell',
+    name: 'Snäcka av tre  stolpar'
   },
 
   {
@@ -332,8 +332,8 @@ let maskar = [
 </ellipse>
 `,
     abbr: '1 dc, ch1, 1dc shell',
-    desc: ' ',
-    name: ''
+    desc: 'V_shell',
+    name: 'V-snäcka '
   }
 ]
 
