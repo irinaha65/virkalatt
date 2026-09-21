@@ -19,15 +19,25 @@ function visaMaskar () {
   maskar.forEach(element => {
     let tr = document.createElement('tr')
     let td1 = document.createElement('td')
+    if(element.svg_g){td1.innerHTML =element.svg_g}
+    else{
+    let width = 23
+    if(element.width){
+      width = element.width
+    }
     td1.innerHTML =
       `<svg preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000"
-    style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
-    <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
+    style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width:`
+    +width+`px; height: 23px;">
+    <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;
+    stroke-linejoin:round;stroke-miterlimit:1.5">
+
+
         ` +
       element.svg +
       `
     </g>
-</svg>`
+</svg>`}
     tr.appendChild(td1)
     let td2 = document.createElement('td')
     td2.innerHTML = element.abbr
