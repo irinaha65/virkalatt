@@ -97,11 +97,7 @@ sub {
     bottom: -.25em
 }
 
-img {
-    border: 0;
-      min-width: 100px;
-      min-height: 40px;
-}
+
 
 svg:not(:root) {
     overflow: hidden
@@ -3371,8 +3367,11 @@ td #goback{
    width: 30px;
    height: 30px;
 }
-#goback img { width: 30px !important;
-   height: auto;  }
+#goback img { width: 30px  ;
+   height: auto; 
+    border: 1px solid #888;
+    box-shadow: 0 0 5px #888;
+} 
 .form-control {
     display: block;
     width: 100%;
@@ -9410,10 +9409,7 @@ input.hideArrows[type=number] {
     font-size: 14px
 }
 
-#pg img {
-    max-width: 50%;
-    border: 1px solid #888
-}
+
 
 #pg nav {
     font-size: 16px;

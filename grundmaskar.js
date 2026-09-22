@@ -322,42 +322,7 @@ let maskar = [
     desc: '3_stolpe_shell',
     name: 'Snäcka av tre  stolpar'
   },
-
-  {
-    svg: ` <path
-    d="M80.993 15.817 256 496.228m0 0L431.007 15.817m57.5 0h-115m-235.014 0h-115m320.011 96.482 115 66.395M53.496 112.299l115.001 66.395"
-    style="fill:none;stroke:#000;stroke-width:30px">
-</path>
-<ellipse cx="256" cy="42.334" rx="65.658" ry="30.907" style="fill:none;stroke:#000;stroke-width:22px">
-</ellipse>
-`,
-    abbr: '1 dc, ch1, 1dc shell',
-    desc: 'V_shell',
-    name: 'V-snäcka '
-  },
-    {
-    svg: `
-   <path
-                                                                    d="M80.993 15.817 256 496.228m0 0L431.007 15.817m57.5 0h-115m-235.014 0h-115m320.011 96.482 115 66.395M53.496 112.299l115.001 66.395"
-                                                                    style="fill:none;stroke:#000;stroke-width:30px">
-                                                                </path>
-                                                                <ellipse cx="181.067" cy="24.409" rx="37.466"
-                                                                    ry="17.637"
-                                                                    style="fill:none;stroke:#000;stroke-width:12.55px">
-                                                                </ellipse>
-                                                                <ellipse cx="256" cy="24.409" rx="37.466" ry="17.637"
-                                                                    style="fill:none;stroke:#000;stroke-width:12.55px">
-                                                                </ellipse>
-                                                                <ellipse cx="330.933" cy="24.409" rx="37.466"
-                                                                    ry="17.637"
-                                                                    style="fill:none;stroke:#000;stroke-width:12.55px">
-                                                                </ellipse>
-`,
-    abbr: '1dc, ch3, 1dc shell',
-    desc: ' ',
-    name: '1 dc, ch 3, 1 dc shell'
-  },
-  {
+ {
     svg: ` <path
                                                                     d="m42.559 80.362 213.486 419.981m0 0L175.24 19.414"
                                                                     style="fill:none;stroke:#000;stroke-width:21.76px">
@@ -388,9 +353,44 @@ let maskar = [
                                                                 </path>`
     ,
     abbr: '4dc shell', width: 46, 
-    desc: ' ',
+    desc: '4_stolpe_shell',
     name: '4 double crochet shell'
   },
+  {
+    svg: ` <path
+    d="M80.993 15.817 256 496.228m0 0L431.007 15.817m57.5 0h-115m-235.014 0h-115m320.011 96.482 115 66.395M53.496 112.299l115.001 66.395"
+    style="fill:none;stroke:#000;stroke-width:30px">
+</path>
+<ellipse cx="256" cy="42.334" rx="65.658" ry="30.907" style="fill:none;stroke:#000;stroke-width:22px">
+</ellipse>
+`,
+    abbr: '1 dc, ch1, 1dc shell',
+    desc: 'V_shell',
+    name: 'V-snäcka '
+  },
+    {
+    svg: `
+   <path
+                                                                    d="M80.993 15.817 256 496.228m0 0L431.007 15.817m57.5 0h-115m-235.014 0h-115m320.011 96.482 115 66.395M53.496 112.299l115.001 66.395"
+                                                                    style="fill:none;stroke:#000;stroke-width:30px">
+                                                                </path>
+                                                                <ellipse cx="181.067" cy="24.409" rx="37.466"
+                                                                    ry="17.637"
+                                                                    style="fill:none;stroke:#000;stroke-width:12.55px">
+                                                                </ellipse>
+                                                                <ellipse cx="256" cy="24.409" rx="37.466" ry="17.637"
+                                                                    style="fill:none;stroke:#000;stroke-width:12.55px">
+                                                                </ellipse>
+                                                                <ellipse cx="330.933" cy="24.409" rx="37.466"
+                                                                    ry="17.637"
+                                                                    style="fill:none;stroke:#000;stroke-width:12.55px">
+                                                                </ellipse>
+`,
+    abbr: '1dc, 3ch, 1dc shell',
+    desc: '1dc_3ch_1dc',
+    name: 'Snäcka av två stolpar med 3 luftmaskor emellan '
+  },
+ 
   {
     svg: `<path  d="m42.559 80.362 213.486 419.981m0 0L175.24 19.414"
                                                                     style="fill:none;stroke:#000;stroke-width:21.76px">
@@ -425,16 +425,16 @@ let maskar = [
                                                                 </ellipse>`
     ,
     abbr: '2dc, ch1, 2 dc shell', width: 46, 
-    desc: ' ',
-    name: '2 dc, ch 1, 2 dc shell'
+    desc: '2dc_1ch_2dc',
+    name: 'Snäcka av fyra stolpar med en luftmaska emellan'
   },
   {
     svg: `   <path d="m256 446.011 512-380m-512 0v380m57.5-380h-115m627 0h-115m-512 76.32 115 52.52m261.12-52.52 115 52.52"
          style="fill:none;stroke:#000;stroke-width:24px"></path>
     ` ,width: 46, 
     abbr: '2dc lr',
-    desc: ' ',
-    name: '2 dc in same stitch, leaning right'
+    desc: '2d_lr',
+    name: 'Högerlutande ökning med 2 stolpar i samma maska'
   },
   {
     svg: ` <path  d="m256 66.011 512 380m0-380v380m57.5-380h-115m-397 0h-115m512 76.32 115 52.52M327.91 181.908l128.451-26.634"
@@ -442,11 +442,11 @@ let maskar = [
                                                                 </path>`
     ,
     abbr: '2dc ll', width: 46, 
-    desc: ' ',
-    name: ' 2 dc in same stitch, leaning left'
+    desc: '2d_ll',
+    name: 'Vänsterlutande ökning med 2 stolpar i samma maska '
   }
   ,
-  {
+ /* {
     svg: `  <path d="m50 380 1024-380m-1024 380 512-380m-512 0v380m57.5-380h-115m627 0h-115m627 0h-115m-1024 76.32 115 52.52m628.12-52.52 115 52.52m-484-52.52 115 52.52" style="fill:none;stroke:#000;stroke-width:24px"></path>
    
                                                            `
@@ -468,7 +468,8 @@ let maskar = [
     abbr: '3dc ll', width: 59, 
     desc: ' ',
     name: '3 dc in same stitch, leaning left '
-  }, {
+  },*/
+   {
     svg: `  `
     ,svg_g:`<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" 
     width="23px" height="23px"
@@ -481,23 +482,25 @@ let maskar = [
   </g>
 </svg>`,
     abbr: '',
-    desc: ' ',
-    name: 'Magic ring'
-  }, {
+    desc: 'magic_ring',
+    name: 'Den magiska ringen '
+  },
+  /* {
     svg_g: `  <svg preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-11.875 -11.875 118.75 118.75" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;"><g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round"><circle cx="47.372" cy="47.371" r="45.328" style="fill:none;stroke:#000;stroke-width:4.09px"></circle></g></svg> `
     ,
     abbr: '',
     desc: ' ',
     name: 'Ring'
-  }, {
+  },*/ 
+  {
     svg: `  <path  d="M105.645 310.018 420.352 15.467m-328.704 0 314.707 294.551m0 0L256 496.772M105.645 310.018 256 496.772"
                                                                     style="fill:none;stroke:#000;stroke-width:30px">
                                                                 </path>
                                                        `
     ,
     abbr: '',
-    desc: ' ',
-    name: 'Waistcoat'
+    desc: 'waistcoat',
+    name: 'Stickad virkning '
   }, {
     svg: `  <path
                                                                     d="M105.645 310.018 420.352 15.467m-328.704 0 314.707 294.551m0 75.669C381.85 450.864 323.728 496.738 256 496.738S130.15 450.864 105.645 385.687m300.71-75.669v75.669m-300.71-75.669v75.669"
@@ -534,17 +537,7 @@ let maskar = [
     abbr: 'dec',
     desc: ' ',
     name: 'Decrease '
-  }, {
-    svg: `  <path  d="M106 15.122h300M178.049 173.465l155.902 90.01M256 15.122v427.036"
-                    style="fill:none;stroke:#000;stroke-width:30px">
-                      </path>  <ellipse cx="256" cy="453.186" rx="146.749" ry="44.099"
-                                                                    style="fill:none;stroke:#000;stroke-width:22.76px">
-                                                                </ellipse>    `
-    ,
-    abbr: 'fdc',
-    desc: 'Foundation_Double_Crochet',
-    name: 'Double foundation chain '
-  }, {
+  },  {
     svg: `    <ellipse cx="256" cy="383" rx="240.655" ry="113.285"
                                                                     style="fill:none;stroke:#000;stroke-width:30px">
                                                                 </ellipse>
@@ -574,7 +567,17 @@ let maskar = [
     desc: ' ',
     name: ' '
   }
-  ,
+  ,{
+    svg: `  <path  d="M106 15.122h300M178.049 173.465l155.902 90.01M256 15.122v427.036"
+                    style="fill:none;stroke:#000;stroke-width:30px">
+                      </path>  <ellipse cx="256" cy="453.186" rx="146.749" ry="44.099"
+                                                                    style="fill:none;stroke:#000;stroke-width:22.76px">
+                                                                </ellipse>    `
+    ,
+    abbr: 'fdc',
+    desc: 'Foundation_Double_Crochet',
+    name: 'Förlängd stolpe  '
+  },
   {
     svg: `
    <path
