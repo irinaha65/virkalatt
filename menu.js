@@ -103,6 +103,39 @@ function showDesc (doc) {
                     });
                 }
             });
+
+
+             // 1. Hämta modal-elementen från HTML
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('expandedImg');
+    const closeBtn = document.querySelector('.modal-close');
+
+    // 2. Hämta alla bilder på sidan (eller specifika, t.ex. '.gallery img')
+    const images = document.querySelectorAll('img:not(#expandedImg)');
+
+    // 3. Loopa igenom varje bild och lägg till click-event
+    images.forEach(img => {
+      if (img.id === 'backArrow') return; // Hoppa över backArrow-bilden
+        img.style.cursor = 'pointer'; // Gör så att muspekaren blir en hand
+        
+        img.addEventListener('click', () => {
+            modal.style.display = 'flex';     // Visa modalen (centrerat med flex)
+            modalImg.src = img.src;           // Sätt modalens bild till samma som den klickade
+            modalImg.alt = img.alt;           // Kopiera även alt-texten för tillgänglighet
+        });
+    });
+
+    // 4. Stäng modalen när man klickar på krysset (X)
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // 5. Stäng modalen om man klickar utanför själva bilden (på bakgrunden)
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
     })
     .catch(function (err) {
       console.error('Ett fel uppstod:', err)

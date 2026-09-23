@@ -400,112 +400,63 @@ let maskar = [ {
     desc: 'SolomonKnut',
     name: 'Solomonknut'
   }, 
-  /** <tr>
-                                                <td><a href="/en/stitches/crochet/1633-ggfjlc/obl2357-axxxuf"
-                                                        data-discover="true"><svg preserveAspectRatio="xMidYMid meet"
-                                                            class="symbolIcon" viewBox="-32.5 -128 195 768" fill="#000"
-                                                            style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
-                                                            <path
-                                                                d="M125 11H5C2 11 0 9 0 6 0 2 2 0 5 0h120c3 0 5 2 5 6 0 3-2 5-5 5">
-                                                            </path>
-                                                            <path
-                                                                d="M64 512c-3 0-5-3-5-6V6c0-4 2-6 5-6 5 0 7 2 7 6v500c0 3-2 6-7 6">
-                                                            </path>
-                                                            <path
-                                                                d="M87 217c-1 0-2-1-3-1L42 191c-3-2-4-5-2-8 1-3 5-4 8-2l42 25c3 2 3 5 2 8-1 2-3 3-5 3m0 33c-1 0-2-1-3-1L42 224c-3-2-4-5-2-8 1-3 5-4 8-2l42 25c3 2 3 5 2 8-1 2-3 3-5 3m0 33c-1 0-2-1-3-1L42 257c-3-2-4-5-2-8 1-3 5-4 8-2l42 25c3 2 3 5 2 8-1 2-3 3-5 3">
-                                                            </path>
-                                                        </svg></a></td>
-                                                <td><a href="/en/stitches/crochet/1633-ggfjlc/obl2357-axxxuf"
-                                                        data-discover="true">dtrc</a></td>
-                                                <td><a href="/en/stitches/crochet/1633-ggfjlc/obl2357-axxxuf"
-                                                        data-discover="true">Double treble crochet</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="/en/stitches/crochet/1633-ggfjlc/obl231o-3aahf2"
-                                                        data-discover="true"><svg preserveAspectRatio="xMidYMid meet"
+  
+  {
+    svg_g: `<svg preserveAspectRatio="xMidYMid meet"
                                                             class="symbolIcon" viewBox="-140.793 -128 844.758 768"
                                                             fill="#000"
                                                             style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
                                                             <path
                                                                 d="M380.409 371c-5 0-11-3-14-8-5-8-2-19 6-24l131-78c8-5 18-2 23 6 5 7 2 18-6 23l-131 78q-4.5 3-9 3m166 141c-6 0-12-4-15-9l-251-461-249 457c-4 8-14 12-22 7-9-4-12-15-7-23l261-479 33-4 265 487c4 8 1 18-7 23-3 1-5 2-8 2m-369-139c-3 0-7-1-10-3l-129-92c-8-5-10-16-4-24 5-7 16-9 23-4l130 93c8 5 9 16 4 23-3 5-9 7-14 7">
                                                             </path>
-                                                        </svg></a></td>
-                                                <td><a href="/en/stitches/crochet/1633-ggfjlc/obl231o-3aahf2"
-                                                        data-discover="true">sc2tog</a></td>
-                                                <td><a href="/en/stitches/crochet/1633-ggfjlc/obl231o-3aahf2"
-                                                        data-discover="true">sc2tog</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="/en/stitches/crochet/1633-ggfjlc/obl231n-2n86q9"
-                                                        data-discover="true"><svg preserveAspectRatio="xMidYMid meet"
+                                                        </svg>          `
+    ,
+    abbr: 'sc2tog',
+    desc: '',
+    name: ''
+  }, 
+  {
+    svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
                                                             class="symbolIcon" viewBox="-175.24425 -128 1051.4655 768"
                                                             fill="#000"
                                                             style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
                                                             <path
                                                                 d="M436.489 406h-177c-9 0-17-8-17-17 0-10 8-17 17-17h177c9 0 17 7 17 17 0 9-8 17-17 17m-84 106c-11 0-19-8-19-17V21c0-10 8-17 19-17 9 0 17 7 17 17v474c0 9-8 17-17 17m-335-15c-4 0-7-1-10-3-8-6-10-17-4-24l334-470h26l334 470c6 7 4 18-4 24-7 5-18 3-24-4l-318-449-320 449c-3 4-9 7-14 7m495-94c-5 0-10-3-14-8-5-7-3-18 4-23l133-95c7-5 18-3 23 4 6 8 4 19-4 24l-132 94c-3 3-6 4-10 4m-324 0c-4 0-7-1-10-4l-132-94c-8-5-10-16-4-24 5-7 16-9 24-4l132 95c7 5 9 16 4 23-4 5-9 8-14 8">
                                                             </path>
-                                                        </svg></a></td>
-                                                <td><a href="/en/stitches/crochet/1633-ggfjlc/obl231n-2n86q9"
-                                                        data-discover="true">sc3tog</a></td>
-                                                <td><a href="/en/stitches/crochet/1633-ggfjlc/obl231n-2n86q9"
-                                                        data-discover="true">sc3tog</a></td>
-                                            </tr>
-                                         
-                                         
-                                       
-                                           
-                                             */
-  
-  
-   
-  {
-    svg: `   `
+                                                        </svg>        
+                                        `
     ,
-    abbr: '',
+    abbr: 'sc3tog',
     desc: '',
     name: ''
-  }, 
-  {
-    svg: `   `
+  }, {
+    svg_g: `<svg preserveAspectRatio="xMidYMid meet"
+     class="symbolIcon" viewBox="-68.75 -128 412.5 768"
+     fill="none"
+     stroke="#000"
+     stroke-width="24"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
+    <g>
+        <!-- Horisontell linje som går rakt genom toppunkten -->
+        <line x1="20" y1="20" x2="255" y2="20" />
+
+        <!-- Vänster sned linje -->
+        <line x1="137.5" y1="20" x2="10" y2="512" />
+
+        <!-- Mittenlinje -->
+        <line x1="137.5" y1="20" x2="137.5" y2="512" />
+
+        <!-- Höger sned linje -->
+        <line x1="137.5" y1="20" x2="265" y2="512" />
+    </g>
+</svg>
+`
     ,
-    abbr: '',
-    desc: '',
-    name: ''
-  }, 
-  {
-    svg: `   `
-    ,
-    abbr: '',
-    desc: '',
-    name: ''
-  }, 
-  {
-    svg: `   `
-    ,
-    abbr: '',
-    desc: '',
-    name: ''
-  }, 
-  {
-    svg: `   `
-    ,
-    abbr: '',
-    desc: '',
-    name: ''
-  }, 
-  {
-    svg: `   `
-    ,
-    abbr: '',
-    desc: '',
-    name: ''
-  }, 
-  {
-    svg: `   `
-    ,
-    abbr: '',
-    desc: '',
-    name: ''
+    abbr: 'hdc3tog',
+    desc: '3_halvstolpar_tillsammans',
+    name: '3 halvstolpar tillsammans '
   }, 
   {
     svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
@@ -530,7 +481,7 @@ let maskar = [ {
                                                         </svg>`
     ,
     abbr: 'dc2tog',
-    desc: '',
+    desc: '2_stolpar_tillsammans',
     name: ''
   }, 
   {
@@ -560,8 +511,8 @@ let maskar = [ {
                                           `
     ,
     abbr: 'dc3tog',
-    desc: '',
-    name: ''
+    desc: '3_stolpar_tillsammans',
+    name: '3 stolpar tillsammans '
   }, 
   {
     svg_g: ` <svg preserveAspectRatio="xMidYMid meet"

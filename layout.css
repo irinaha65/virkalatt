@@ -221,6 +221,66 @@ td,
 th {
     padding: 0
 }
+p   img {
+        max-width:120px !important;
+         max-height:120px !important
+    }
+    /* Bakgrunden som täcker hela skärmen */
+.modal-backdrop {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Något mörkare för bättre kontrast när bilden är stor */
+    z-index: 9999; 
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Borttagen padding för att ge bilden maximal plats */
+    box-sizing: border-box;
+}
+
+/* Den förstorade bilden – NU MAXIMERAD */
+.modal-content {
+    width: auto;
+    height: auto;
+    max-width: 98%;   /* Tillåter bilden att sträcka sig nästan helt ut till sidorna */
+    max-height: 98vh; /* Tillåter bilden att ta upp nästan hela skärmhöjden */
+    object-fit: contain; /* Bevarar bildens proportioner utan att beskära den */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+    animation: zoomIn 0.2s ease-out; 
+ 
+}
+.modal-content   img{
+        width: 80%;
+        height: auto;
+    }
+/* Stängknappen (X) – Flyttad så den ligger snyggt ovanpå bilden om det behövs */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    user-select: none;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8); /* Lägger till skugga så krysset syns även mot ljusa bilder */
+    z-index: 10000; /* Ligger garanterat ovanpå bilden */
+}
+
+.modal-close:hover {
+    color: #ddd;
+    transform: scale(1.1);
+}
+
+/* Enkel zoom-animation */
+@keyframes zoomIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
 
 @media print {
 
@@ -267,9 +327,7 @@ th {
         page-break-inside: avoid
     }
 
-    img {
-        max-width: 100% !important
-    }
+   
 
     p,
     h2,
@@ -1457,7 +1515,7 @@ img {
 
 .img-thumbnail {
     display: inline-block;
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     padding: 4px;
     line-height: 1.42857143;
