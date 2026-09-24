@@ -3419,7 +3419,8 @@ input[type="checkbox"]:focus {
 td #output{
     vertical-align:top;
 }
-td #goback{
+#tr_output{height: 80%;}
+ #goback{
   vertical-align:bottom;
    text-align: right;
    width: 30px;
