@@ -3,7 +3,98 @@
 const sidebar = document.getElementById("sidebar");
 const openBtn = document.getElementById("openBtn");
 const closeBtn = document.getElementById("closeBtn");
+ // Spara en kopia av ursprungstexten så att vi kan återställa den vid ny sökning
+        const contentContainer = document.getElementById('maskar');
+        const originalHTML = contentContainer.innerHTML;
+        const searchInput = document.getElementById('searchBox');
+// Denna funktion tar bort alla gamla <mark>-taggar och återställer texten
+function clearHighlights(container) {
+    const marks = container.querySelectorAll('mark');
+    marks.forEach(mark => {
+        const parent = mark.parentNode;
+        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        parent.normalize(); // Smälter samman splittrade textnoder
+    });
+}
 
+// Denna funktion går igenom alla textnoder och sätter in <mark>-taggar
+function highlightTextNodes(node, regex) {
+    // Om det är en textnod och den inte är tom
+    if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== '') {
+        const matches = node.nodeValue.match(regex);
+        
+        if (matches) {
+            const parent = node.parentNode;
+            // Hoppa över om vi redan är inuti en mark-tagg eller i skript/stilar
+            if (parent.tagName === 'MARK' || parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE') return;
+
+            const fragments = document.createDocumentFragment();
+            let lastIndex = 0;
+
+            // Ersätt texten med en blandning av text och <mark>-element
+            node.nodeValue.replace(regex, function(match, offset) {
+                // Lägg till texten före matchningen
+                fragments.appendChild(document.createTextNode(node.nodeValue.substring(lastIndex, offset)));
+                
+                // Skapa och lägg till <mark>-elementet
+                const markElement = document.createElement('mark');
+                markElement.textContent = match;
+                fragments.appendChild(markElement);
+
+                lastIndex = offset + match.length;
+                return match;
+            });
+
+            // Lägg till eventuell resterande text efter sista matchningen
+            fragments.appendChild(document.createTextNode(node.nodeValue.substring(lastIndex)));
+            
+            // Ersätt den gamla rena textnoden med vårt nya fragment
+            parent.replaceChild(fragments, node);
+        }
+    } else {
+        // Om det är ett element, gå djupare ner i strukturen (rekursion)
+        for (let i = 0; i < node.childNodes.length; i++) {
+            highlightTextNodes(node.childNodes[i], regex);
+            // Justera indexet om trädstrukturen ändrades under körningen
+            if (node.childNodes[i].tagName === 'MARK') i++; 
+        }
+    }
+}
+
+// Lyssna på Enter-tryck
+searchInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        
+        // 1. Ta alltid bort gamla markeringar först
+        clearHighlights(contentContainer);
+        
+        const searchTerm = searchInput.value.trim();
+        
+        // 2. Om rutan inte är tom, kör den säkra sökningen
+        if (searchTerm !== '') {
+            // Undvik att krascha om användaren skriver specialtecken som . ? * + ( ) [ ]
+            const escapedTerm = searchTerm.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+            const regex = new RegExp(escapedTerm, 'gi');
+            
+            highlightTextNodes(contentContainer, regex);
+        }
+           // 3. Hitta den allra första gula markeringen på sidan
+            const firstMatch = contentContainer.querySelector('mark');
+            
+            if (firstMatch) {
+                // Scrolla mjukt så att det första elementet hamnar i mitten av skärmen
+                firstMatch.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
+    }
+});
+    
+let goback = document.createElement("div"); 
+goback.id = "goback";
+goback.innerHTML = '<img src="back-arrow.png" alt="Back Arrow" id="backArrow">';
 // Öppna panelen när man klickar på öppna-knappen
 openBtn.addEventListener("click", () => {
   sidebar.classList.add("open");
@@ -103,7 +194,7 @@ function showDesc (doc) {
                     });
                 }
             });
-
+output.appendChild(goback);
 
              // 1. Hämta modal-elementen från HTML
     const modal = document.getElementById('imageModal');
@@ -147,4 +238,5 @@ function showDesc (doc) {
 }
 
  visaMaskar ();
+ 
 

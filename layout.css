@@ -3419,6 +3419,7 @@ input[type="checkbox"]:focus {
 td #output{
     vertical-align:top;
 }
+#nav_back{color: #337ab7;}
 #tr_output{height: 80%;}
  #goback{
   vertical-align:bottom;
@@ -3431,6 +3432,12 @@ td #output{
     border: 1px solid #888;
     box-shadow: 0 0 5px #888;
 } 
+  /* CSS för att säkerställa att markeringen blir snygg och gul */
+        mark {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+        }
 .form-control {
     display: block;
     width: 100%;
