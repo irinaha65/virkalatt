@@ -385,8 +385,8 @@ let maskar = [ {
 </path>
 `,
     abbr: 'sc2tog',
-    desc: ' ',
-    name: '2 single crochet closed together'
+   desc: '2_fasta_maskar_tillsammans',
+    name: '2 fasta maskor tillsammans '
   },
   {
     svg: ` <path
@@ -395,10 +395,10 @@ let maskar = [ {
 </path>
 `,
     abbr: 'sc3tog',
-    desc: ' ',
-    name: '3 single crochet closed together'
+    desc: '3_fasta_maskar_tillsammans',
+    name: '3 fasta maskor tillsammans '
   },
-  {
+  /*{
     svg_g: `<svg preserveAspectRatio="xMidYMid meet"
                                                             class="symbolIcon" viewBox="-140.793 -128 844.758 768"
                                                             fill="#000"
@@ -424,9 +424,10 @@ let maskar = [ {
                                         `
     ,
     abbr: 'sc3tog',
-    desc: '3_fasta_maskor_tillsammans',
+    desc: '3_fasta_maskar_tillsammans',
     name: '3 fasta maskor tillsammans '
-  }, {
+  },*/
+   {
     svg_g: `<svg preserveAspectRatio="xMidYMid meet"
      class="symbolIcon" viewBox="-68.75 -128 412.5 768"
      fill="none"
@@ -479,7 +480,7 @@ let maskar = [ {
     ,
     abbr: 'dc2tog',
     desc: '2_stolpar_tillsammans',
-    name: ''
+    name: '2 stolpar tillsammans'
   }, 
   {
     svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
