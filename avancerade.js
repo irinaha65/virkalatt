@@ -534,8 +534,8 @@ let maskar = [ {
                                                         </svg>   `
     ,
     abbr: '3-dc cluster',
-    desc: '',
-    name: '3-dc cluster'
+    desc: '3-dc_cluster',
+    name: 'Stolpgrupp med 3 stolpar '
   }, 
   {
     svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
@@ -558,8 +558,8 @@ let maskar = [ {
                                            `
     ,
     abbr: '3-hdc cluster',
-    desc: '',
-    name: '3-hdc cluster/puff st/bobble'
+    desc: '3-hdc_cluster',
+    name: 'Stolpgrupp med 3 halvstolpar'
   }, 
   {
     svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
@@ -590,10 +590,10 @@ let maskar = [ {
                                            `
     ,
     abbr: '5-dc popcorn',
-    desc: '',
-    name: '5-dc popcorn'
+    desc: '5-dc_popcorn',
+    name: 'Popcorn med 5 stolpar '
   }, 
-  {
+  /*{
     svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
                                                             class="symbolIcon"
                                                             viewBox="-278.9545 -128 1673.7269999999999 768" fill="#000"
@@ -607,7 +607,7 @@ let maskar = [ {
     abbr: '5-dc shell',
     desc: '',
     name: '5-dc shell'
-  }, 
+  }, */
   {
     svg_g: `  <svg preserveAspectRatio="xMidYMid meet"
                                                             class="symbolIcon" viewBox="-148.356 -128 890.136 768"
@@ -620,36 +620,11 @@ let maskar = [ {
                                          `
     ,
     abbr: 'ch-3 picot',
-    desc: '',
-    name: 'Ch-3 picot'
+    desc: 'ch-3_picot',
+    name: 'Picot av 3 luftmaskor '
   }, 
-  {
-    svg_g: `  <svg preserveAspectRatio="xMidYMid meet"
-                                                            class="symbolIcon" viewBox="-38 -128 228 768" fill="#000"
-                                                            style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
-                                                            <path
-                                                                d="M77 512C35 512 2 478 2 437c0-4 3-7 7-7s7 3 7 7c0 33 27 60 61 60 33 0 60-27 60-60S110 377 77 377h-8V7c0-4 3-7 8-7 4 0 7 3 7 7v356c38 4 68 35 68 74 0 41-34 75-75 75m25-306c-1 0-3-1-4-2L44 166c-3-2-4-7-1-10 2-4 7-4 10-2l54 39c3 2 4 7 1 10q-1.5 3-6 3M145 14H8C4 14 0 11 0 7S4 0 8 0h137c4 0 7 3 7 7s-3 7-7 7">
-                                                            </path>
-                                                        </svg> `
-    ,
-    abbr: 'fpdc',
-    desc: '',
-    name: 'Front post dc ()'
-  }, 
-  {
-    svg_g: `  <svg preserveAspectRatio="xMidYMid meet"
-                                                            class="symbolIcon" viewBox="-38 -128 228 768" fill="#000"
-                                                            style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
-                                                            <path
-                                                                d="M74 512c-4 0-7-3-7-7s3-7 7-7c34 0 61-27 61-60 0-4 3-8 7-8s8 4 8 8c0 41-34 74-76 74m0 0C33 512 0 479 0 438c0-39 29-71 67-74V8c0-4 3-8 7-8 5 0 9 4 9 8l-1 363v7h-8c-33 0-60 27-60 60s27 60 60 60c5 0 8 3 8 7s-3 7-8 7m28-306c-1 0-3 0-4-1L44 167c-3-3-4-7-1-11 2-3 7-4 10-1l54 38c3 3 4 7 1 10q-1.5 3-6 3M145 15H8C4 15 0 12 0 8S4 0 8 0h137c4 0 7 4 7 8s-3 7-7 7">
-                                                            </path>
-                                                        </svg>   
-                                          `
-    ,
-    abbr: 'bpdc',
-    desc: '',
-    name: 'Back post dc'
-  }, 
+  
+  /*
   {
     svg_g: `<svg preserveAspectRatio="xMidYMid meet"
                                                             class="symbolIcon" viewBox="-270 -128 1620 768" fill="#000"
@@ -675,29 +650,8 @@ let maskar = [ {
     abbr: 'flo',
     desc: '',
     name: 'Worked in front loop only'
-  },
+  },*/
   
-  {
-    svg: `    <path
-                                                                d="M242.966 512c-3 0-5-1-7-4-3-4-2-10 2-13 84-62 108-186 94-275-11-78-50-136-103-155-5-1-8-7-6-11 2-5 7-8 12-6 60 21 103 84 116 170 14 97-12 225-102 292-2 2-4 2-6 2">
-                                                            </path>
-                                                            <path
-                                                                d="M217.966 504c-2 0-5-1-7-3-3-4-3-10 1-13 33-30 53-148 46-261-6-81-25-140-51-158-4-3-5-8-2-13 3-4 8-5 13-2 42 29 54 120 58 171 7 105-8 237-52 276-1 2-4 3-6 3m-71 8c-2 0-4-1-5-2-91-67-117-195-102-292 12-86 56-149 115-170 5-2 11 1 12 6 2 4-1 10-5 11-54 19-92 77-104 155-13 89 10 213 95 275 4 3 5 9 1 13-1 3-4 4-7 4">
-                                                            </path>
-                                                            <path
-                                                                d="M171.966 504q-3 0-6-3c-43-39-59-171-52-276 4-51 16-142 59-171 4-3 10-2 12 2 3 5 2 10-2 13-26 18-45 77-50 158-8 113 12 231 45 261 4 3 4 9 1 13-2 2-4 3-7 3">
-                                                            </path>
-                                                            <path
-                                                                d="M197.966 70c-52 0-92-27-92-61 0-5 4-9 9-9s9 4 9 9c0 23 34 42 74 42s74-19 74-42c0-5 4-9 9-9s9 4 9 9c0 34-40 61-92 61">
-                                                            </path>
-                                                            <path
-                                                                d="M197.966 503c-5 0-10-4-10-9V65c0-5 5-9 10-9s9 4 9 9v429c0 5-4 9-9 9">
-                                                            </path>
-                                            `
-    ,
-    abbr: '5-hdc popcorn',
-    desc: '5-hdc_popcorn',
-    name: ''
-  },
+  
  
 ]
