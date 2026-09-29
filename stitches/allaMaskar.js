@@ -1,19 +1,19 @@
-let maskar = [ {
+let allaMaskar = [{
     svg: ` <path d="M106 15.122h300M106 496.654h300M256 15.122v407.227" style="fill:none;stroke:#000;stroke-width:30px">
 </path> `,
     abbr: 'hdc blo',
     desc: 'Half_double_crochet_back_loop_only',
     name: 'Halvstolpe i bakre maskbågen'
-  },
-  {
+},
+{
     svg: ` <path d="M106 15.122h300M106 496.654h300M256 15.122v407.227M178.049 117.465l155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
 </path> `,
     abbr: 'dc blo',
     desc: 'Stolpe_bakre_maskbagen',
     name: 'Stolpe i bakre maskbågen'
-  },
-  {
+},
+{
     svg: ` <path
     d="M106 15.122h300M106 496.654h300M256 15.122v407.227M178.049 97.465l155.902 90.01m-155.902 11.26 155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -21,8 +21,8 @@ let maskar = [ {
     abbr: 'trc blo',
     desc: 'Treble_crochet_back',
     name: 'Dubbelstolpe i bakre maskbågen'
-  },
-  {
+},
+{
     svg: ` <path
     d="M106 15.122h300M106 496.654h300M256 15.122v407.227M178.049 84.465l155.902 90.01m-155.902 11.26 155.902 90.01m-155.902 0 155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -30,9 +30,9 @@ let maskar = [ {
     abbr: 'dtrc blo',
     desc: 'Treble_crochet_back',
     name: 'Trippelstolpe i bakre maskbågen'
-  },
+},
 
-  {
+{
     svg: ` <path
     d="M86.044 496.784 425.956 156.87m-339.912 0 339.912 339.914M86.044 50.376s52.108-42.074 91.51-33.843c39.514 8.254 95.573 64.685 141.727 68.146 29.62 2.221 68.965-11.943 106.675-51.045"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -40,17 +40,17 @@ let maskar = [ {
     abbr: 'Crab',
     desc: 'Crab_stitch',
     name: 'Kräftmaska'
-  },
+},
 
-  {
+{
     svg: ` <path d="M66.766 393.937 445.234 15.467M66.766 474.947h378.468M66.766 15.467l378.468 378.47"
     style="fill:none;stroke:#000;stroke-width:30px">
 </path> `,
     abbr: 'sc blo',
     desc: 'Single_crochet_back',
     name: 'Fast maska i den bakre maskbågen '
-  },
-  {
+},
+{
     svg: ` <path
     d="M105.645 310.018 420.352 15.467m-328.704 0 314.707 294.551m0 75.669C381.85 450.864 323.728 496.738 256 496.738S130.15 450.864 105.645 385.687"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -58,8 +58,8 @@ let maskar = [ {
     abbr: 'sc flo',
     desc: 'Single_crochet_fram',
     name: 'Fast maska i den främre maskbågen'
-  },
-  {
+},
+{
     svg: ` <path
     d="M106 15.122h300m.355 370.565C381.85 450.864 323.728 496.738 256 496.738S130.15 450.864 105.645 385.687M256 15.122v407.227"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -67,8 +67,8 @@ let maskar = [ {
     abbr: 'hdc flo ',
     desc: 'Half_double_crochet_fram_loop_only',
     name: 'Halvstolpe i främre maskbågen '
-  },
-  {
+},
+{
     svg: ` <path
     d="M106 15.122h300m.355 370.565C381.85 450.864 323.728 496.738 256 496.738S130.15 450.864 105.645 385.687M256 15.122v407.227M178.049 117.465l155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -76,8 +76,8 @@ let maskar = [ {
     abbr: 'dc flo',
     desc: 'Stolpe_framre_maskbagen',
     name: 'Stolpe i främre maskbågen '
-  },
-  {
+},
+{
     svg: ` <path
     d="M106 15.122h300m.355 370.565C381.85 450.864 323.728 496.738 256 496.738S130.15 450.864 105.645 385.687M256 15.122v407.227M178.049 97.465l155.902 90.01m-155.902 11.26 155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -85,8 +85,8 @@ let maskar = [ {
     abbr: 'trc flo',
     desc: 'Dubbelstolpe_fram',
     name: 'Dubbelstolpe i främre maskbågen'
-  },
-  {
+},
+{
     svg: ` <path
     d="M106 15.122h300m.355 370.565C381.85 450.864 323.728 496.738 256 496.738S130.15 450.864 105.645 385.687M256 15.122v407.227M178.049 84.465l155.902 90.01m-155.902 11.26 155.902 90.01m-155.902 0 155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -94,8 +94,8 @@ let maskar = [ {
     abbr: 'dtrc flo',
     desc: 'Trippelstolpe_fram',
     name: 'Trippelstolpe i främre maskbågen'
-  },
-  {
+},
+{
     svg: ` <path
     d="M105.645 310.018 420.352 15.467m-328.704 0 314.707 294.551m0 75.669C381.85 450.864 323.728 496.738 256 496.738S130.15 450.864 105.645 385.687m0-75.669v75.669"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -103,8 +103,8 @@ let maskar = [ {
     abbr: 'bpsc',
     desc: 'Bakre_relief-fast_maska',
     name: 'Relief fastmaska bakifrån'
-  },
-  {
+},
+{
     svg: ` <path
     d="M105.645 310.018 420.352 15.467m-328.704 0 314.707 294.551m0 75.669C381.85 450.864 323.728 496.738 256 496.738S130.15 450.864 105.645 385.687m300.71-75.669v75.669"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -112,8 +112,8 @@ let maskar = [ {
     abbr: 'ftpsc',
     desc: 'front_post_single_crochet',
     name: 'Relief fastmaska framifrån'
-  },
-  {
+},
+{
     svg: ` <path
     d="M256 322.267c-49.419 0-89.541 40.122-89.541 89.541s40.122 89.54 89.541 89.54 89.541-40.121 89.541-89.54M256 15.382v306.885M345.541 15.382H166.459"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -121,8 +121,8 @@ let maskar = [ {
     abbr: 'bphdc',
     desc: 'reliefhalvstolpe_bakifran',
     name: 'Relief halvstolpe bakifrån '
-  },
-  {
+},
+{
     svg: ` <path
     d="M256 322.267c-49.419 0-89.541 40.122-89.541 89.541s40.122 89.54 89.541 89.54 89.541-40.121 89.541-89.54M256 15.382v306.885M345.541 15.382H166.459m11.59 102.083 155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -130,8 +130,8 @@ let maskar = [ {
     abbr: 'bpdc',
     desc: 'Relief_stolpe_bakifran',
     name: 'Relief stolpe bakifrån'
-  },
-  {
+},
+{
     svg: ` <path
     d="M256 322.267c-49.419 0-89.541 40.122-89.541 89.541s40.122 89.54 89.541 89.54 89.541-40.121 89.541-89.54M256 15.382v306.885M345.541 15.382H166.459m11.59 66.083 155.902 90.01m-155.902 11.26 155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -139,8 +139,8 @@ let maskar = [ {
     abbr: 'bptrc',
     desc: 'reliefdubbelstolpe_bakifran',
     name: 'Relief dubbelstolpe bakifrån '
-  },
-  {
+},
+{
     svg: ` <path
     d="M256 322.267c-49.419 0-89.541 40.122-89.541 89.541s40.122 89.54 89.541 89.54 89.541-40.121 89.541-89.54M256 15.382v306.885M345.541 15.382H166.459m11.59 45.446 155.902 90.01m-155.902-18.74 155.902 90.01m-155.902-19 155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -148,8 +148,8 @@ let maskar = [ {
     abbr: 'bpdtrc',
     desc: 'reliefhalvstolpe_bakifran',
     name: 'Relief dubbelstolpe bakifrån '
-  },
-  {
+},
+{
     svg: ` <path
     d="M256 322.267c49.419 0 89.541 40.122 89.541 89.541s-40.122 89.54-89.541 89.54-89.541-40.121-89.541-89.54M256 15.382v306.885M166.459 15.382h179.082"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -157,8 +157,8 @@ let maskar = [ {
     abbr: 'fphdc',
     desc: 'reliefhalvstolpe_framifran',
     name: 'Relief halvstolpe framifrån'
-  },
-  {
+},
+{
     svg: ` <path
     d="M256 322.267c49.419 0 89.541 40.122 89.541 89.541s-40.122 89.54-89.541 89.54-89.541-40.121-89.541-89.54M256 15.382v306.885M166.459 15.382h179.082m-11.59 102.083-155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -166,8 +166,8 @@ let maskar = [ {
     abbr: 'fpdc',
     desc: 'relief_stolpe_framifran',
     name: ' Relief stolpe framifrån '
-  },
-  {
+},
+{
     svg: ` <path
     d="M256 322.267c49.419 0 89.541 40.122 89.541 89.541s-40.122 89.54-89.541 89.54-89.541-40.121-89.541-89.54M256 15.382v306.885M166.459 15.382h179.082m-11.59 66.083-155.902 90.01m155.902 11.26-155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -175,8 +175,8 @@ let maskar = [ {
     abbr: 'fptrc',
     desc: 'reliefdubbelstolpe_framifran',
     name: 'Relief dubbelstolpe framifrån '
-  },
-  {
+},
+{
     svg: ` <path
     d="M256 322.267c49.419 0 89.541 40.122 89.541 89.541s-40.122 89.54-89.541 89.54-89.541-40.121-89.541-89.54M256 15.382v306.885M166.459 15.382h179.082m-11.59 45.446-155.902 90.01m155.902-18.74-155.902 90.01m155.902-19-155.902 90.01"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -185,10 +185,10 @@ let maskar = [ {
     abbr: 'fpdtrc',
     desc: 'relieftrippelstolpe_framifran',
     name: 'Relief tripelstolpe framifrån '
-  },
-  
- 
-   {
+},
+
+
+{
     svg: ` <path
     d="M80.993 15.817 256 496.228m0 0L431.007 15.817m57.5 0h-115m-235.014 0h-115m320.011 96.482 115 66.395M53.496 112.299l115.001 66.395"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -199,8 +199,8 @@ let maskar = [ {
     abbr: '1 dc, ch1, 1dc shell',
     desc: 'V_shell',
     name: 'V-snäcka '
-  },
-  {
+},
+{
     svg: ` <path
     d="M135.608 256 376.392 15.216M17.081 256 256 494.919M494.919 256 256 494.919M135.608 15.216 376.392 256"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -209,8 +209,8 @@ let maskar = [ {
     abbr: '2sc shell',
     desc: '2_single_crochet_shell',
     name: 'Snäcka av två fasta maskor '
-  },
-  {
+},
+{
     svg: ` <path
     d="M135.608 256 376.392 15.216M17.081 256 256 494.919M494.919 256 256 494.919m0-213.365v213.365M135.608 15.216 376.392 256"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -218,16 +218,16 @@ let maskar = [ {
     abbr: '3sc shell',
     desc: '3_single_crochet_shell',
     name: 'Snäcka av tre fasta maskor'
-  },
-  {
+},
+{
     svg: ` <path d="M80.993 15.817 256 496.228m0 0L431.007 15.817m57.5 0h-115m-235.014 0h-115"
     style="fill:none;stroke:#000;stroke-width:30px">
 </path> `,
     abbr: '2hdc shell',
     desc: '2_halvstolpe_shell',
     name: 'Snäcka av två halvstolpar'
-  },
-  {
+},
+{
     svg: ` <path
     d="M80.993 15.817 256 496.228m0 0L431.007 15.817m-175.007 0v480.388M313.5 15.817h-115m290.007 0h-115m-235.014 0h-115"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -235,9 +235,9 @@ let maskar = [ {
     abbr: '3hdc shell',
     desc: '3_halvstolpe_shell',
     name: 'Snäcka av tre halvstolpar '
-  },
+},
 
-  {
+{
     svg: ` <path
     d="M80.993 15.817 256 496.228m0 0L431.007 15.817m57.5 0h-115m-235.014 0h-115m320.011 96.482 115 66.395M53.496 112.299l115.001 66.395"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -246,18 +246,18 @@ let maskar = [ {
     abbr: '2dc shell',
     desc: '2_double_crochet_shell',
     name: 'Snäcka av 2 stolpar'
-  },
-  {
+},
+{
     svg: ` <path
     d="M80.993 15.817 256 496.228m0 0L431.007 15.817m-175.007 0v480.388M313.5 15.817h-115m290.007 0h-115m-235.014 0h-115M198.5 112.299l115 66.395m30.004-66.395 115 66.395M53.496 112.299l115.001 66.395"
     style="fill:none;stroke:#000;stroke-width:30px">
 </path>
 `,
-    abbr: '3dc shell', width: 46, 
+    abbr: '3dc shell', width: 46,
     desc: '3_stolpe_shell',
     name: 'Snäcka av tre  stolpar'
-  },
- {
+},
+{
     svg: ` <path d="m42.559 80.362 213.486 419.981m0 0L175.24 19.414"
                                                                     style="fill:none;stroke:#000;stroke-width:21.76px">
                                                                 </path>
@@ -286,12 +286,12 @@ let maskar = [ {
                                                                     style="fill:none;stroke:#000;stroke-width:18.76px">
                                                                 </path>`
     ,
-    abbr: '4dc shell', width: 46, 
+    abbr: '4dc shell', width: 46,
     desc: '4_stolpe_shell',
     name: '4 double crochet shell'
-  },
- 
-    {
+},
+
+{
     svg: `
    <path  d="M80.993 15.817 256 496.228m0 0L431.007 15.817m57.5 0h-115m-235.014 0h-115m320.011 96.482 115 66.395M53.496 112.299l115.001 66.395"
                                                                     style="fill:none;stroke:#000;stroke-width:30px">
@@ -311,45 +311,23 @@ let maskar = [ {
     abbr: '1dc, 3ch, 1dc shell',
     desc: '1dc_3ch_1dc',
     name: 'Snäcka av två stolpar med 3 luftmaskor emellan '
-  },
- 
-  {
-    svg: `<path  d="m42.559 80.362 213.486 419.981m0 0L175.24 19.414"
-                                                                    style="fill:none;stroke:#000;stroke-width:21.76px">
-                                                                </path>
-                                                                <path
-                                                                    d="m73.413 53.159-61.709 54.405M215.919 11.969 134.561 26.86"
-                                                                    style="fill:none;stroke:#000;stroke-width:22.06px">
-                                                                </path>
-                                                                <path d="m148.21 144.22 97.425 10.145"
-                                                                    style="fill:none;stroke:#000;stroke-width:18.8px">
-                                                                </path>
-                                                                <path d="m52.836 188.257 96.59 16.152"
-                                                                    style="fill:none;stroke:#000;stroke-width:18.76px">
-                                                                </path>
-                                                                <path
-                                                                    d="M469.531 80.206 256.045 500.187m0 0L336.85 19.259"
-                                                                    style="fill:none;stroke:#000;stroke-width:21.76px">
-                                                                </path>
-                                                                <path
-                                                                    d="m438.677 53.003 61.709 54.405M296.171 11.813l81.358 14.891"
-                                                                    style="fill:none;stroke:#000;stroke-width:22.06px">
-                                                                </path>
-                                                                <path d="m347.595 185.839-64.856-73.405"
-                                                                    style="fill:none;stroke:#000;stroke-width:18.8px">
-                                                                </path>
-                                                                <path d="m434.431 239.15-46.943-85.946"
-                                                                    style="fill:none;stroke:#000;stroke-width:18.76px">
-                                                                </path>
-                                                                <ellipse cx="256.045" cy="59.554" rx="43.873"
-                                                                    ry="20.652"
-                                                                    style="fill:none;stroke:#000;stroke-width:14.7px">
-                                                                </ellipse>`
+},
+
+{
+    svg: `<path  d="m42.559 80.362 213.486 419.981m0 0L175.24 19.414"  style="fill:none;stroke:#000;stroke-width:21.76px"></path>
+    <path d="m73.413 53.159-61.709 54.405M215.919 11.969 134.561 26.86"  style="fill:none;stroke:#000;stroke-width:22.06px"></path>
+ <path d="m148.21 144.22 97.425 10.145" style="fill:none;stroke:#000;stroke-width:18.8px"> </path>
+ <path d="m52.836 188.257 96.59 16.152"  style="fill:none;stroke:#000;stroke-width:18.76px"></path>
+ <path  d="M469.531 80.206 256.045 500.187m0 0L336.85 19.259" style="fill:none;stroke:#000;stroke-width:21.76px"></path>
+ <path  d="m438.677 53.003 61.709 54.405M296.171 11.813l81.358 14.891" style="fill:none;stroke:#000;stroke-width:22.06px"> </path>
+ <path d="m347.595 185.839-64.856-73.405"  style="fill:none;stroke:#000;stroke-width:18.8px"></path>
+ <path d="m434.431 239.15-46.943-85.946" style="fill:none;stroke:#000;stroke-width:18.76px"> </path>
+ <ellipse cx="256.045" cy="59.554" rx="43.873"  ry="20.652" style="fill:none;stroke:#000;stroke-width:14.7px"></ellipse>`
     ,
-    abbr: '2dc, ch1, 2 dc shell', width: 46, 
+    abbr: '2dc, ch1, 2 dc shell', width: 46,
     desc: '2dc_1ch_2dc',
     name: 'Snäcka av fyra stolpar med en luftmaska emellan'
-  },
+},
 {
     svg: `  <path  d="M105.645 310.018 420.352 15.467m-328.704 0 314.707 294.551m0 0L256 496.772M105.645 310.018 256 496.772"
                                                                     style="fill:none;stroke:#000;stroke-width:30px">
@@ -359,7 +337,7 @@ let maskar = [ {
     abbr: 'waistcoat',
     desc: 'waistcoat',
     name: 'Stickad virkning '
-  }, {
+}, {
     svg: `  <path d="M105.645 310.018 420.352 15.467m-328.704 0 314.707 294.551m0 75.669C381.85 450.864 323.728 496.738 256 496.738S130.15 450.864 105.645 385.687m300.71-75.669v75.669m-300.71-75.669v75.669"
                                                                     style="fill:none;stroke:#000;stroke-width:30px">
                                                                 </path>
@@ -368,27 +346,27 @@ let maskar = [ {
     abbr: 'lp st',
     desc: 'loop_stitch',
     name: '	Öglevirkning'
-  },
-  {
+},
+{
     svg: ` <path
     d="M184.182 330.963c0-91.448 32.181-165.692 71.818-165.692s71.818 74.244 71.818 165.692S295.637 496.655 256 496.655 184.182 422.411 184.182 330.963M256 15.37v149.901M327.818 90.32H177.917"
     style="fill:none;stroke:#000;stroke-width:30px">
 </path> `,
     abbr: 'sol',
-    desc: 'SolomonKnut',
+    desc: 'Solomonknut',
     name: 'Solomonknut'
-  }, 
-   {
+},
+{
     svg: ` <path
     d="m135.608 254.135 240.784 240.784M17.081 254.135 256 15.216m238.919 238.919L256 15.216M135.608 494.919 376.392 254.135"
     style="fill:none;stroke:#000;stroke-width:30px">
 </path>
 `,
     abbr: 'sc2tog',
-   desc: '2_fasta_maskar_tillsammans',
+    desc: '2_fasta_maskar_tillsammans',
     name: '2 fasta maskor tillsammans '
-  },
-  {
+},
+{
     svg: ` <path
     d="m135.608 254.135 240.784 240.784M17.081 254.135 256 15.216m238.919 238.919L256 15.216m0 213.365V15.216M135.608 494.919 376.392 254.135"
     style="fill:none;stroke:#000;stroke-width:30px">
@@ -397,38 +375,38 @@ let maskar = [ {
     abbr: 'sc3tog',
     desc: '3_fasta_maskar_tillsammans',
     name: '3 fasta maskor tillsammans '
-  },
-  /*{
-    svg_g: `<svg preserveAspectRatio="xMidYMid meet"
-                                                            class="symbolIcon" viewBox="-140.793 -128 844.758 768"
-                                                            fill="#000"
-                                                            style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
-                                                            <path
-                                                                d="M380.409 371c-5 0-11-3-14-8-5-8-2-19 6-24l131-78c8-5 18-2 23 6 5 7 2 18-6 23l-131 78q-4.5 3-9 3m166 141c-6 0-12-4-15-9l-251-461-249 457c-4 8-14 12-22 7-9-4-12-15-7-23l261-479 33-4 265 487c4 8 1 18-7 23-3 1-5 2-8 2m-369-139c-3 0-7-1-10-3l-129-92c-8-5-10-16-4-24 5-7 16-9 23-4l130 93c8 5 9 16 4 23-3 5-9 7-14 7">
-                                                            </path>
-                                                        </svg>          `
-    ,
-    abbr: 'sc2tog',
-    desc: '',
-    name: ''
-  }, 
-  {
-    svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
-                                                            class="symbolIcon" viewBox="-175.24425 -128 1051.4655 768"
-                                                            fill="#000"
-                                                            style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
-                                                            <path
-                                                                d="M436.489 406h-177c-9 0-17-8-17-17 0-10 8-17 17-17h177c9 0 17 7 17 17 0 9-8 17-17 17m-84 106c-11 0-19-8-19-17V21c0-10 8-17 19-17 9 0 17 7 17 17v474c0 9-8 17-17 17m-335-15c-4 0-7-1-10-3-8-6-10-17-4-24l334-470h26l334 470c6 7 4 18-4 24-7 5-18 3-24-4l-318-449-320 449c-3 4-9 7-14 7m495-94c-5 0-10-3-14-8-5-7-3-18 4-23l133-95c7-5 18-3 23 4 6 8 4 19-4 24l-132 94c-3 3-6 4-10 4m-324 0c-4 0-7-1-10-4l-132-94c-8-5-10-16-4-24 5-7 16-9 24-4l132 95c7 5 9 16 4 23-4 5-9 8-14 8">
-                                                            </path>
-                                                        </svg>        
-                                        `
-    ,
-    abbr: 'sc3tog',
-    desc: '3_fasta_maskar_tillsammans',
-    name: '3 fasta maskor tillsammans '
-  },*/
-   {
-    svg_g: `<svg preserveAspectRatio="xMidYMid meet"
+},
+/*{
+  svg_g: `<svg preserveAspectRatio="xMidYMid meet"
+                                                          class="symbolIcon" viewBox="-140.793 -128 844.758 768"
+                                                          fill="#000"
+                                                          style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
+                                                          <path
+                                                              d="M380.409 371c-5 0-11-3-14-8-5-8-2-19 6-24l131-78c8-5 18-2 23 6 5 7 2 18-6 23l-131 78q-4.5 3-9 3m166 141c-6 0-12-4-15-9l-251-461-249 457c-4 8-14 12-22 7-9-4-12-15-7-23l261-479 33-4 265 487c4 8 1 18-7 23-3 1-5 2-8 2m-369-139c-3 0-7-1-10-3l-129-92c-8-5-10-16-4-24 5-7 16-9 23-4l130 93c8 5 9 16 4 23-3 5-9 7-14 7">
+                                                          </path>
+                                                      </svg>          `
+  ,
+  abbr: 'sc2tog',
+  desc: '',
+  name: ''
+}, 
+{
+  svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
+                                                          class="symbolIcon" viewBox="-175.24425 -128 1051.4655 768"
+                                                          fill="#000"
+                                                          style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
+                                                          <path
+                                                              d="M436.489 406h-177c-9 0-17-8-17-17 0-10 8-17 17-17h177c9 0 17 7 17 17 0 9-8 17-17 17m-84 106c-11 0-19-8-19-17V21c0-10 8-17 19-17 9 0 17 7 17 17v474c0 9-8 17-17 17m-335-15c-4 0-7-1-10-3-8-6-10-17-4-24l334-470h26l334 470c6 7 4 18-4 24-7 5-18 3-24-4l-318-449-320 449c-3 4-9 7-14 7m495-94c-5 0-10-3-14-8-5-7-3-18 4-23l133-95c7-5 18-3 23 4 6 8 4 19-4 24l-132 94c-3 3-6 4-10 4m-324 0c-4 0-7-1-10-4l-132-94c-8-5-10-16-4-24 5-7 16-9 24-4l132 95c7 5 9 16 4 23-4 5-9 8-14 8">
+                                                          </path>
+                                                      </svg>        
+                                      `
+  ,
+  abbr: 'sc3tog',
+  desc: '3_fasta_maskar_tillsammans',
+  name: '3 fasta maskor tillsammans '
+},*/
+{
+    svg_g: `<svg    preserveAspectRatio="xMidYMid meet"
      class="symbolIcon" viewBox="-68.75 -128 412.5 768"
      fill="none"
      stroke="#000"
@@ -455,9 +433,9 @@ let maskar = [ {
     abbr: 'hdc3tog',
     desc: '3_halvstolpar_tillsammans',
     name: '3 halvstolpar tillsammans '
-  }, 
-  {
-    svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
+},
+{
+    svg_g: ` <svg    preserveAspectRatio="xMidYMid meet"
                                                             class="symbolIcon" viewBox="-68.75 -128 412.5 768"
                                                             fill="#000"
                                                             style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
@@ -481,9 +459,9 @@ let maskar = [ {
     abbr: 'dc2tog',
     desc: '2_stolpar_tillsammans',
     name: '2 stolpar tillsammans'
-  }, 
-  {
-    svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
+},
+{
+    svg_g: ` <svg    preserveAspectRatio="xMidYMid meet"
                                                             class="symbolIcon" viewBox="-125.5 -127.75 753 766.5"
                                                             fill="#000"
                                                             style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
@@ -511,9 +489,9 @@ let maskar = [ {
     abbr: 'dc3tog',
     desc: '3_stolpar_tillsammans',
     name: '3 stolpar tillsammans '
-  }, 
-  {
-    svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
+},
+{
+    svg_g: ` <svg   preserveAspectRatio="xMidYMid meet"
                                                             class="symbolIcon" viewBox="-70 -128 420 768" fill="#000"
                                                             style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
                                                             <g
@@ -536,9 +514,9 @@ let maskar = [ {
     abbr: '3-dc cluster',
     desc: '3-dc_cluster',
     name: 'Stolpgrupp med 3 stolpar '
-  }, 
-  {
-    svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
+},
+{
+    svg_g: ` <svg   preserveAspectRatio="xMidYMid meet"
                                                             class="symbolIcon" viewBox="-65.75 -127.75 394.5 766.5"
                                                             fill="#000"
                                                             style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
@@ -560,9 +538,9 @@ let maskar = [ {
     abbr: '3-hdc cluster',
     desc: '3-hdc_cluster',
     name: 'Stolpgrupp med 3 halvstolpar'
-  }, 
-  {
-    svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
+},
+{
+    svg_g: ` <svg   preserveAspectRatio="xMidYMid meet"
                                                             class="symbolIcon" viewBox="-97 -128 582 768" fill="#000"
                                                             style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
                                                             <g
@@ -592,24 +570,24 @@ let maskar = [ {
     abbr: '5-dc popcorn',
     desc: '5-dc_popcorn',
     name: 'Popcorn med 5 stolpar '
-  }, 
-  /*{
-    svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
-                                                            class="symbolIcon"
-                                                            viewBox="-278.9545 -128 1673.7269999999999 768" fill="#000"
-                                                            style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
-                                                            <path
-                                                                d="M243.191 301c-4 0-9-3-10-8s2-11 8-12l78-18c5-2 11 2 12 7 1 6-2 11-8 12l-78 19zm255 205c-3 0-5-1-7-3l-400-416c-4-4-4-10 0-14s11-4 15 0l399 416c4 4 4 10 0 14-2 2-5 3-7 3m-488-395c-4 0-8-3-10-7-1-6 2-11 7-13l168-48c5-2 11 1 13 6 1 6-2 11-7 13l-168 49zm444 141h-1l-79-10c-6 0-10-5-9-11 0-5 6-10 11-9l80 10c5 0 9 5 8 11 0 5-5 9-10 9m73 246q-6 0-9-6l-200-457c-2-5 0-11 5-13s11 0 13 5l200 457c3 5 0 11-5 13-1 1-2 1-4 1m-290-449c-5 0-10-3-10-8-1-6 3-11 8-12l173-24c6-1 11 3 12 8 1 6-3 11-9 12l-173 24zm609 278c-5 0-9-3-10-7l-22-77c-1-5 2-11 7-12 5-2 11 1 12 6l22 77c2 6-1 11-7 13zm-224 185c-3 0-5-1-7-3-4-4-4-10 0-14l401-422c4-4 11-4 15 0s4 10 0 14l-402 422c-2 2-4 3-7 3m484-403h-3l-168-49c-5-1-8-7-7-12 2-6 7-9 13-7l168 49c5 1 8 7 6 12-1 5-5 7-9 7m-383 180c-3 0-6-2-8-5l-47-64c-3-5-2-11 2-14 5-4 11-3 15 2l47 65c3 4 2 10-3 14-1 1-3 2-6 2m-128 209c-2 0-3 0-4-1-6-2-8-8-6-13l201-457c2-5 8-7 13-5s7 8 5 13l-200 457q-3 6-9 6m284-450h-2l-173-24c-5-1-9-6-8-12 1-5 6-9 11-8l173 24c6 1 10 6 9 12-1 5-5 8-10 8m-284 213c-2 0-3-1-5-2l-70-40c-5-3-6-9-4-14 3-5 9-6 14-4l70 41c5 3 7 9 4 14-2 3-5 5-9 5m-34 234c-6 0-11-5-11-10V15c0-6 5-11 11-11s11 5 11 11v470c0 5-5 10-11 10m85-475h-176c-6 0-10-5-10-10 0-6 4-10 10-10h176c5 0 10 4 10 10 0 5-5 10-10 10">
-                                                            </path>
-                                                        </svg>
-                                         `
-    ,
-    abbr: '5-dc shell',
-    desc: '',
-    name: '5-dc shell'
-  }, */
-  {
-    svg_g: `  <svg preserveAspectRatio="xMidYMid meet"
+},
+/*{
+  svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
+                                                          class="symbolIcon"
+                                                          viewBox="-278.9545 -128 1673.7269999999999 768" fill="#000"
+                                                          style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
+                                                          <path
+                                                              d="M243.191 301c-4 0-9-3-10-8s2-11 8-12l78-18c5-2 11 2 12 7 1 6-2 11-8 12l-78 19zm255 205c-3 0-5-1-7-3l-400-416c-4-4-4-10 0-14s11-4 15 0l399 416c4 4 4 10 0 14-2 2-5 3-7 3m-488-395c-4 0-8-3-10-7-1-6 2-11 7-13l168-48c5-2 11 1 13 6 1 6-2 11-7 13l-168 49zm444 141h-1l-79-10c-6 0-10-5-9-11 0-5 6-10 11-9l80 10c5 0 9 5 8 11 0 5-5 9-10 9m73 246q-6 0-9-6l-200-457c-2-5 0-11 5-13s11 0 13 5l200 457c3 5 0 11-5 13-1 1-2 1-4 1m-290-449c-5 0-10-3-10-8-1-6 3-11 8-12l173-24c6-1 11 3 12 8 1 6-3 11-9 12l-173 24zm609 278c-5 0-9-3-10-7l-22-77c-1-5 2-11 7-12 5-2 11 1 12 6l22 77c2 6-1 11-7 13zm-224 185c-3 0-5-1-7-3-4-4-4-10 0-14l401-422c4-4 11-4 15 0s4 10 0 14l-402 422c-2 2-4 3-7 3m484-403h-3l-168-49c-5-1-8-7-7-12 2-6 7-9 13-7l168 49c5 1 8 7 6 12-1 5-5 7-9 7m-383 180c-3 0-6-2-8-5l-47-64c-3-5-2-11 2-14 5-4 11-3 15 2l47 65c3 4 2 10-3 14-1 1-3 2-6 2m-128 209c-2 0-3 0-4-1-6-2-8-8-6-13l201-457c2-5 8-7 13-5s7 8 5 13l-200 457q-3 6-9 6m284-450h-2l-173-24c-5-1-9-6-8-12 1-5 6-9 11-8l173 24c6 1 10 6 9 12-1 5-5 8-10 8m-284 213c-2 0-3-1-5-2l-70-40c-5-3-6-9-4-14 3-5 9-6 14-4l70 41c5 3 7 9 4 14-2 3-5 5-9 5m-34 234c-6 0-11-5-11-10V15c0-6 5-11 11-11s11 5 11 11v470c0 5-5 10-11 10m85-475h-176c-6 0-10-5-10-10 0-6 4-10 10-10h176c5 0 10 4 10 10 0 5-5 10-10 10">
+                                                          </path>
+                                                      </svg>
+                                       `
+  ,
+  abbr: '5-dc shell',
+  desc: '',
+  name: '5-dc shell'
+}, */
+{
+    svg_g: `  <svg   preserveAspectRatio="xMidYMid meet" 
                                                             class="symbolIcon" viewBox="-148.356 -128 890.136 768"
                                                             fill="#000"
                                                             style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
@@ -622,36 +600,183 @@ let maskar = [ {
     abbr: 'ch-3 picot',
     desc: 'ch-3_picot',
     name: 'Picot av 3 luftmaskor '
-  }, 
-  
-  /*
-  {
-    svg_g: `<svg preserveAspectRatio="xMidYMid meet"
-                                                            class="symbolIcon" viewBox="-270 -128 1620 768" fill="#000"
-                                                            style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
-                                                            <path
-                                                                d="M1013 512c-37 0-67-30-67-67C946 274 764 134 541 134 316 134 134 274 134 445c0 37-30 67-67 67S0 482 0 445C0 200 242 0 541 0c297 0 539 200 539 445 0 37-30 67-67 67">
-                                                            </path>
-                                                        </svg> `
+},
+
+    /*
+    {
+      svg_g: `<svg preserveAspectRatio="xMidYMid meet"
+                                                              class="symbolIcon" viewBox="-270 -128 1620 768" fill="#000"
+                                                              style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
+                                                              <path
+                                                                  d="M1013 512c-37 0-67-30-67-67C946 274 764 134 541 134 316 134 134 274 134 445c0 37-30 67-67 67S0 482 0 445C0 200 242 0 541 0c297 0 539 200 539 445 0 37-30 67-67 67">
+                                                              </path>
+                                                          </svg> `
+      ,
+      abbr: 'co',
+      desc: '',
+      name: 'Cast on'
+    }, 
+    {
+      svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
+                                                              class="symbolIcon" viewBox="-270 -128 1620 768" fill="#000"
+                                                              style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
+                                                              <path
+                                                                  d="M541 512C242 512 0 313 0 67 0 30 30 0 67 0s67 30 67 67c0 172 182 311 407 311C765 378 947 239 947 67c0-37 29-67 66-67s67 30 67 67c0 246-242 445-539 445">
+                                                              </path>
+                                                          </svg> `
+      ,
+      abbr: 'flo',
+      desc: '',
+      name: 'Worked in front loop only'
+    },*/
     ,
-    abbr: 'co',
-    desc: '',
-    name: 'Cast on'
-  }, 
-  {
-    svg_g: ` <svg preserveAspectRatio="xMidYMid meet"
-                                                            class="symbolIcon" viewBox="-270 -128 1620 768" fill="#000"
-                                                            style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;">
-                                                            <path
-                                                                d="M541 512C242 512 0 313 0 67 0 30 30 0 67 0s67 30 67 67c0 172 182 311 407 311C765 378 947 239 947 67c0-37 29-67 66-67s67 30 67 67c0 246-242 445-539 445">
-                                                            </path>
-                                                        </svg> `
+{
+    svg: ` <ellipse cx="256" cy="256" rx="240.655" ry="113.285" style="fill:none;stroke:#000;stroke-width:30px"> </ellipse>
+`,
+    name: 'Luftmaska',
+    abbr: 'ch',
+    desc: 'chain'
+},
+{
+    svg: ' <ellipse cx="256" cy="256" rx="240.655" ry="113.285" style="stroke:#000;stroke-width:30px"></ellipse> ',
+    abbr: 'sl st',
+    name: 'Smygmaska',
+    desc: 'smygmaska'
+},
+{
+    svg: ` <path d="M15.216 496.784 496.784 15.216m-481.568 0 481.568 481.568"
+    style="fill:none;stroke:#000;stroke-width:30px"> </path> `,
+    abbr: 'sc',
+    desc: 'single_crochet',
+    name: 'Fast maska '
+},
+{
+    svg: ` <path d="M106 15.122h300m-150 0v481.756" style="fill:none;stroke:#000;stroke-width:30px">
+ </path>`,
+
+    abbr: 'hdc',
+    desc: 'Halvstolpe',
+    name: 'Halvstolpe'
+},
+{
+    svg: ` <path d="M106 15.122h300M178.049 173.465l155.902 90.01M256 15.122v481.756"
+    style="fill:none;stroke:#000;stroke-width:30px">
+</path>
+`,
+
+    abbr: 'dc',
+    desc: 'Stolpe',
+    name: 'Stolpe'
+},
+{
+    svg: ` <path d="M106 15.122h300M178.049 133.455l155.902 90.01m-155.902 0 155.902 90.01M256 15.122v481.756"
+    style="fill:none;stroke:#000;stroke-width:30px">
+</path>
+`,
+    abbr: 'trc',
+    desc: 'Dubbelstolpe',
+    name: 'Dubbelstolpe'
+},
+{
+    svg: ` <path
+    d="M106 15.122h300M178.049 83.455l155.902 90.01m-155.902 0 155.902 90.01m-155.902 0 155.902 90.01M256 15.122v481.756"
+    style="fill:none;stroke:#000;stroke-width:30px">
+      </path> `,
+    abbr: 'dtrc',
+    desc: 'Tredubbel_stolpe',
+    name: 'Trippel stolpe'
+},
+
+{
+    svg: `   <path d="m256 446.011 512-380m-512 0v380m57.5-380h-115m627 0h-115m-512 76.32 115 52.52m261.12-52.52 115 52.52"
+         style="fill:none;stroke:#000;stroke-width:24px"></path>
+    ` , width: 46,
+    abbr: '2dc lr',
+    desc: '2d_lr',
+    name: 'Högerlutande ökning med 2 stolpar i samma maska'
+},
+{
+    svg: ` <path  d="m256 66.011 512 380m0-380v380m57.5-380h-115m-397 0h-115m512 76.32 115 52.52M327.91 181.908l128.451-26.634"
+                                                                    style="fill:none;stroke:#000;stroke-width:24px">
+                                                                </path>`
     ,
-    abbr: 'flo',
-    desc: '',
-    name: 'Worked in front loop only'
-  },*/
+    abbr: '2dc ll', width: 46,
+    desc: '2d_ll',
+    name: 'Vänsterlutande ökning med 2 stolpar i samma maska '
+}
+    ,
+/* {
+   svg: `  <path d="m50 380 1024-380m-1024 380 512-380m-512 0v380m57.5-380h-115m627 0h-115m627 0h-115m-1024 76.32 115 52.52m628.12-52.52 115 52.52m-484-52.52 115 52.52" style="fill:none;stroke:#000;stroke-width:24px"></path>
   
-  
- 
+                                                          `
+   ,
+   svg_g:`<svg preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-7.5 -15 1081.5 405" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 64px; height: 23px;">
+   <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
+         <!-- Uppdaterad path: Det sista horisontella tak-strecket har förlängts -->
+         <path d="m50 380 1024-380m-1024 380 512-380m-512 0v380m57.5-380h-115m627 0h-115m627 0h-170m-1024 76.32 115 52.52m628.12-52.52 115 52.52m-484-52.52 115 52.52" style="fill:none;stroke:#000;stroke-width:24px"></path>
+   </g>
+</svg>
+`,
+   abbr: '3dc lr', width: 79, 
+   desc: ' ',
+   name: '3 dc in same stitch, leaning right'
+ }, {
+   svg: `     <path d="m500 380-1024-380m1024 380-512-380m512 0v380m-57.5-380h115m-627 0h115m-627 0h115m1024 76.32-115 52.52m-260-52.52-115 52.52m-253.12-52.52-115 52.52" style="fill:none;stroke:#000;stroke-width:24px"></path>
+                                                        `
+   ,
+   abbr: '3dc ll', width: 59, 
+   desc: ' ',
+   name: '3 dc in same stitch, leaning left '
+ },*/
+{
+    svg: `  `
+    , svg_g: `<svg    
+    width="23px" height="23px"
+  viewBox="0 0 23.000029 23.00001" version="1.1" id="svg1" xml:space="preserve">
+  <defs id="defs1" />
+  <g id="layer1" transform="translate(-41.370793,-79.157346)">
+    <path style="fill:#000000;stroke-width:0.185415"
+      d="m 51.390591,102.10771 c -1.538723,-0.14955 -3.14278,-0.69099 -4.323063,-1.45924 -3.139293,-2.04337 -5.064293,-5.026269 -5.61331,-8.698148 -0.100022,-0.668962 -0.112998,-2.356195 -0.02317,-3.013621 0.185661,-1.358891 0.547038,-2.572858 1.104819,-3.711407 0.599692,-1.224096 1.266758,-2.151377 2.212828,-3.076027 1.662386,-1.624749 3.713844,-2.616595 6.051236,-2.925673 0.88968,-0.117642 2.28347,-0.07476 3.186457,0.09804 1.657072,0.317106 3.273229,1.036299 4.634981,2.06258 0.94618,0.713084 2.423044,2.292147 3.067551,3.279827 0.674688,1.03393 1.33899,2.70031 1.53377,3.847416 0.124755,0.734703 0.134834,2.01311 0.02189,2.776829 -0.449238,3.037808 -2.35022,5.938054 -5.063576,7.725281 -1.010832,0.665811 -2.412008,1.247483 -3.573935,1.483653 -0.509538,0.10356 -0.690905,0.11432 -1.909365,0.11328 -1.274712,-0.001 -1.379059,-0.008 -1.961179,-0.13356 -1.875691,-0.40393 -3.480224,-1.305466 -4.8483,-2.7241 -1.429528,-1.482356 -2.362737,-3.354803 -2.744734,-5.507197 -0.162292,-0.914452 -0.161602,-2.5117 0.0015,-3.431836 0.760893,-4.292994 3.829152,-7.374923 7.881481,-7.916599 3.235591,-0.432501 6.589739,1.098107 8.622134,3.934561 0.963146,1.34419 1.654105,3.088649 1.865267,4.709228 0.05511,0.422972 0.05298,0.482584 -0.02132,0.596451 -0.0998,0.152927 -0.364818,0.175098 -0.483986,0.04049 -0.04545,-0.05134 -0.108564,-0.310059 -0.156538,-0.641694 -0.266752,-1.843994 -1.029357,-3.526259 -2.249978,-4.963327 -1.240417,-1.460374 -3.048197,-2.540562 -4.868161,-2.90883 -1.133524,-0.229369 -2.105369,-0.228399 -3.263756,0.0033 -4.660719,0.932041 -7.625681,5.797967 -6.607992,10.844657 0.57486,2.850715 2.414415,5.31522 4.901242,6.566335 1.133743,0.570382 2.024565,0.800567 3.389124,0.875735 1.760917,0.097 3.027581,-0.139579 4.486337,-0.837936 2.052609,-0.982653 3.859157,-2.718231 4.869623,-4.67832 0.117181,-0.227307 0.237104,-0.429537 0.266494,-0.4494 0.02939,-0.01986 0.03783,-0.03645 0.01877,-0.03687 -0.01907,-3.72e-4 0.03118,-0.148131 0.111672,-0.328257 0.445415,-0.996796 0.742919,-2.281764 0.738038,-3.187712 -0.0081,-1.512746 -0.27728,-2.945869 -0.738437,-3.932175 -0.230632,-0.493267 -0.78576,-1.415013 -1.237392,-2.054596 -1.448771,-2.051688 -3.418207,-3.50077 -5.723735,-4.211439 -0.952908,-0.293731 -2.492298,-0.483734 -3.396662,-0.419241 -2.592187,0.18485 -4.779207,1.190174 -6.537796,3.005272 -0.848962,0.876241 -1.321591,1.540991 -1.847525,2.598534 -0.783677,1.57581 -1.147604,3.155118 -1.144092,4.964928 0.0055,2.85154 1.012605,5.469627 2.926333,7.607595 0.436094,0.487193 1.450573,1.406925 1.927588,1.747562 0.175025,0.124985 0.329243,0.239058 0.342707,0.253497 0.01346,0.01444 0.178696,0.110624 0.367185,0.213744 1.187712,0.64976 2.48464,1.07148 3.739758,1.21604 0.748664,0.0862 2.380865,0.0361 3.065408,-0.0941 1.107896,-0.21073 2.041478,-0.5225 3.035398,-1.0137 2.248486,-1.111198 4.077802,-2.91796 5.177066,-5.113234 0.421467,-0.841685 0.809919,-1.934251 0.943791,-2.654516 0.07834,-0.42147 0.170263,-1.194273 0.170326,-1.431882 1.01e-4,-0.388344 0.118581,-0.627564 0.320652,-0.647416 0.103929,-0.01022 0.178405,0.01765 0.244789,0.09157 0.241218,0.268578 -0.01501,2.087011 -0.498248,3.536201 -0.226582,0.679484 -0.807028,1.86262 -1.229955,2.507043 -1.297875,1.9776 -3.169186,3.584014 -5.242947,4.500754 -1.89577,0.83806 -3.976375,1.19028 -5.917034,1.00166 z"
+      id="path1" />
+  </g>
+</svg>`,
+    abbr: 'magic ring',
+    desc: 'magic_ring',
+    name: 'Den magiska ringen '
+},
+    /* {
+      svg_g: `  <svg preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-11.875 -11.875 118.75 118.75" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;"><g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round"><circle cx="47.372" cy="47.371" r="45.328" style="fill:none;stroke:#000;stroke-width:4.09px"></circle></g></svg> `
+      ,
+      abbr: '',
+      desc: ' ',
+      name: 'Ring'
+    },*/
+    /*, {
+      svg_g: ` <svg preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-320 -320 1440 1440" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;"><path fill="#000" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="14.493" stroke-width="57.971" d="M771.014 28.986H28.986L400 771.014z"></path></svg>  `  ,
+      abbr: 'dc 2 rows down',
+      desc: ' ',
+      name: 'Double crochet worked 2 rows down'
+    }, {
+      svg_g: ` <svg preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width: 23px; height: 23px;"><g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"><ellipse cx="256" cy="256" rx="240.655" ry="113.285" style="stroke:#000;stroke-width:30px"></ellipse><path d="M491.664 396.687C453.255 434.158 362.156 460.531 256 460.531S58.745 434.158 20.336 396.687" style="fill:none;stroke:#000;stroke-width:35.42px"></path></g></svg>  `
+      ,
+      abbr: 'sl st blo',
+      desc: ' ',
+      name: 'Slip stitch back loop only'
+    }, {
+      svg: `     <path  d="M0 42.957V0h37.354v42.957zm0 261.267V83.838h37.354v220.386zm94.214 0V83.838h33.618v31.335q24.28-36.315 70.142-36.316 19.922 0 36.627 7.16t25.006 18.78q8.3 11.622 11.621 27.6 2.075 10.377 2.075 36.316v135.511H235.95V170.166q0-22.827-4.358-34.137t-15.46-18.054q-11.103-6.745-26.044-6.745-23.865 0-41.193 15.149-17.328 15.15-17.328 57.483v120.362zM474.39 223.499l36.731 4.772q-6.019 37.977-30.817 59.455t-60.907 21.478q-45.24 0-72.736-29.571t-27.496-84.772q0-35.694 11.829-62.464 11.828-26.769 36.004-40.155 24.177-13.385 52.606-13.385 35.9 0 58.729 18.158 22.827 18.159 29.26 51.569l-36.316 5.603q-5.189-22.204-18.366-33.411Q439.733 109.571 421.057 109.57q-28.222 0-45.862 20.233-17.639 20.233-17.639 64.02 0 44.409 17.017 64.539 17.016 20.129 44.409 20.129 21.997 0 36.731-13.489 14.733-13.488 18.677-41.503"
+                    style="fill-rule:nonzero"></path>
+                                                             `
+      ,
+      abbr: 'inc',
+      desc: ' ',
+      name: 'Increase '
+    }, {
+      svg: `  <path   d="M119.653 232.642v-21.265Q103.626 236.45 72.522 236.45q-20.154 0-37.054-11.108Q18.566 214.233 9.283 194.318 0 174.402 0 148.535q0-25.232 8.411-45.782 8.41-20.551 25.232-31.501Q50.463 60.303 71.252 60.303q15.235 0 27.137 6.427t19.36 16.742V0h28.406v232.642zM29.358 148.535q0 32.373 13.647 48.401t32.215 16.028q18.725 0 31.817-15.314t13.092-46.734q0-34.596-13.33-50.782T73.95 83.948q-19.043 0-31.817 15.552t-12.775 49.035m277.075 29.834 29.517 3.65q-6.982 25.867-25.867 40.149-18.884 14.282-48.242 14.282-36.975 0-58.637-22.772t-21.661-63.873q0-42.53 21.899-66.016t56.812-23.486q33.8 0 55.225 23.01 21.423 23.01 21.423 64.746 0 2.54-.159 7.617H211.06q1.587 27.771 15.71 42.53 14.124 14.758 35.23 14.758 15.71 0 26.818-8.252 11.11-8.252 17.615-26.343M212.646 132.19h94.104q-1.904-21.264-10.791-31.897Q282.312 83.789 260.571 83.789q-19.677 0-33.087 13.171-13.409 13.172-14.838 35.23m269.141 38.721 28.088 3.65q-4.602 29.04-23.565 45.465-18.964 16.424-46.576 16.424-34.595 0-55.621-22.613t-21.027-64.826q0-27.294 9.045-47.766 9.046-20.47 27.533-30.707 18.488-10.235 40.229-10.235 27.453 0 44.909 13.885t22.376 39.435l-27.771 4.285q-3.968-16.98-14.044-25.55-10.077-8.568-24.36-8.569-21.582 0-35.07 15.472-13.49 15.472-13.489 48.957 0 33.96 13.013 49.353t33.96 15.393q16.82 0 28.088-10.315 11.267-10.315 14.282-31.738"
+               style="fill-rule:nonzero"></path>  `
+      ,
+      abbr: 'dec',
+      desc: ' ',
+      name: 'Decrease '
+    }*/
 ]
+

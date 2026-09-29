@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MönsterFixaren - AI & OpenCV Igenkänning</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; display: flex; flex-direction: column; align-items: center; }
+        h1 { color: #333; margin-bottom: 5px; }
+        #status { font-weight: bold; color: #ff9800; margin-bottom: 15px; }
+        #status.ready { color: #28a745; }
+        .toolbar { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+        .symbol-btn { padding: 8px 12px; border: 2px solid #ccc; background: #fff; cursor: pointer; border-radius: 4px; font-weight: bold; font-size: 16px; }
+        .symbol-btn.active { border-color: #007bff; background: #e7f1ff; color: #007bff; }
+        .canvas-container { position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.15); background: white; overflow: auto; max-width: 100%; max-height: 60vh; }
+        canvas { display: block; cursor: crosshair; }
+        .control-group { display: flex; flex-direction: column; gap: 5px; }
+        label { font-size: 12px; color: #666; font-weight: bold; }
+        .btn-action { background: #007bff; color: white; border: none; padding: 8px 14px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        .btn-action:disabled { background: #ccc; cursor: not-allowed; }
+        .instructions { margin-top: 10px; font-size: 13px; color: #555; background: #e2e3e5; padding: 10px; border-radius: 5px; max-width: 900px; line-height: 1.4; }
+    </style>
+    <!-- Laddar OpenCV.js officiella webb-version -->
+    <script async src="https://opencv.org" onload="onOpenCvReady();" type="text/javascript"></script>
+</head>
+<body>
+
+    <h1>MönsterFixaren Auto-Scan 🧶</h1>
+    <div id="status">⏳ Laddar OpenCV.js (Datorseende)...</div>
+    
+    <div class="toolbar">
+        <div class="control-group">
+            <label>1. MÖNSTERBILD</label>
+            <input type="file" id="imageLoader" accept="image/*">
+        </div>
+
+        <div class="control-group">
+            <label>2. AKTIV SYMBOL</label>
+            <div>
+                <button class="symbol-btn active" data-symbol="ch">○ Lm</button>
+                <button class="symbol-btn" data-symbol="sc">× Fm</button>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label>STORLEK</label>
+            <input type="range" id="sizeSlider" min="10" max="100" value="30">
+        </div>
+
+        <!-- Tröskelvärde för AI-scannern -->
+        <div class="control-group">
+            <label>SCAN-KÄNSLIGHET (0.1 - 1.0)</label>
+            <input type="range" id="thresholdSlider" min="40" max="95" value="70">
+        </div>
+
+        <div class="control-group">
+            <label>3. AUTOMATISK SCAN</label>
+            <button id="scanBtn" class="btn-action" disabled>Sök symboler i bilden</button>
+        </div>
+
+        <div class="control-group">
+            <label>4. EXPORT</label>
+            <div>
+                <label><input type="checkbox" id="toggleBg" checked> Visa original</label>
+                <button id="exportBtn" style="margin-left:10px; background:#28a745; color:white; border:none; padding:6px 12px; border-radius:4px; cursor:pointer; font-weight:bold;">Spara (PNG)</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="instructions">
+        🤖 <strong>Så här kör du automatisk igenkänning:</strong><br>
+        1. Ladda upp ditt suddiga diagram.<br>
+        2. Klicka <strong>en gång</strong> på en av symbolerna i bilden så att den får en blå ruta runt sig. Detta blir din "mall" som OpenCV söker efter.<br>
+        3. Tryck på knappen <strong>"Sök symboler i bilden"</strong>. Appen scannar då hela mönstret och duplicerar automatiskt din digitala SVG-symbol på alla liknande ställen!
+    </div>
+
+    <div class="canvas-container" style="margin-top: 15px;">
+        <canvas id="patternCanvas" tabindex="1"></canvas>
+    </div>
+
+    <!-- En dold canvas som används i bakgrunden för OpenCV-analys -->
+    <canvas id="hiddenTemplateCanvas" style="display:none;"></canvas>
+
+    <script>
+        const canvas = document.getElementById('patternCanvas');
+        const ctx = canvas.getContext('2d');
+        const hiddenTemplateCanvas = document.getElementById('hiddenTemplateCanvas');
+        const tCtx = hiddenTemplateCanvas.getContext('2d');
+        
+        let bgImage = null;
+        let placedSymbols = []; 
+        let currentSymbol = 'ch';
+        let symbolSize = 30;
+        let showBackground = true;
+        let openCvReady = false;
+
+        // Dina SVG-mallar
+        const SVG_TEMPLATES = {
+            ch: `<svg xmlns="http://w3.org" viewBox="0 0 100 100"><ellipse cx="50" cy="50" rx="40" ry="20" fill="none" stroke="black" stroke-width="8"/></svg>`,
+            sc: `<svg xmlns="http://w3.org" viewBox="0 0 100 100"><path d="M20,20 L80,80 M80,20 L20,80" fill="none" stroke="black" stroke-width="8"/></svg>`
+        };
+
+        const loadedSvgImages = {};
+
+        // Meddelande när OpenCV laddat klart
+        function onOpenCvReady() {
+            openCvReady = true;
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerText = "✅ OpenCV.js är redo! Datorseende aktiverat.";
+            statusDiv.className = "ready";
+            document.getElementById('scanBtn').disabled = false;
+            preloadSVGs();
+        }
+
+        function preloadSVGs() {
+            Object.keys(SVG_TEMPLATES).forEach(key => {
+                const svgString = SVG_TEMPLATES[key];
+                const svgBlob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+                const url = URL.createObjectURL(svgBlob);
+                const img = new Image();
+                img.onload = () => { loadedSvgImages[key] = img; drawEverything(); };
+                img.src = url;
+            });
+        }
+
+        canvas.width = 800; canvas.height = 600;
+
+        document.getElementById('imageLoader').addEventListener('change', function(e) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                bgImage = new Image();
+                bgImage.onload = function() {
+                    canvas.width = bgImage.width; canvas.height = bgImage.height;
+                    placedSymbols = []; // Nollställ mönster
+                    drawEverything();
+                }
+                bgImage.src = event.target.result;
+            }
+            reader.readAsDataURL(e.target.files);
+        });
+
+        document.querySelectorAll('.symbol-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.symbol-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentSymbol = this.getAttribute('data-symbol');
+            });
+        });
+
+        document.getElementById('sizeSlider').addEventListener('input', (e) => symbolSize = parseInt(e.target.value));
+        document.getElementById('toggleBg').addEventListener('change', (e) => { showBackground = e.target.checked; drawEverything(); });
+
+        // Klicka för att sätta den FÖRSTA symbolen (Mallen för OpenCV)
+        canvas.addEventListener('mousedown', function(e) {
+            if (!bgImage) return; 
+            const rect = canvas.getBoundingClientRect();
+            const x = (e.clientX - rect.left) * (canvas.width / rect.width);
+            const y = (e.clientY - rect.top) * (canvas.height / rect.height);
+
+            // Vi sparar symbolen
+            placedSymbols.push({ x: x, y: y, type: currentSymbol, size: symbolSize });
+            drawEverything();
+        });
+
+        // ====================================================
+        // OPENCV AUTOMATISK TEMPLATE MATCHING ALGORITM
+        // ====================================================
+        document.getElementById('scanBtn').addEventListener('click', function() {
+            if (!bgImage || placedSymbols.length === 0 || !openCvReady) {
+                alert("Ladda upp en bild och klicka ut minst en symbol på mönstret som referens först!");
+                return;
+            }
+
+            // 1. Hämta den senaste symbolen användaren klickade på som mall (Template)
+            const target = placedSymbols[placedSymbols.length - 1];
+            
+            // Klipp ut exakt det bildområdet från originalbilden till en dold canvas
+            hiddenTemplateCanvas.width = target.size;
+            hiddenTemplateCanvas.height = target.size;
+            tCtx.drawImage(bgImage, target.x - target.size/2, target.y - target.size/2, target.size, target.size, 0, 0, target.size, target.size);
+
+            // 2. Läs in bilderna i OpenCV-matriser (cv.Mat)
+            let src = cv.imread(canvas); // Hela stora bilden
+            let templ = cv.imread(hiddenTemplateCanvas); // Det lilla urklippet vi söker efter
+            let dst = new cv.Mat();
+            let mask = new cv.Mat();
+
+            // 3. Kör OpenCV Template Matching
+            // TM_CCOEFF_NORMED ger ett resultat mellan 0.0 (inget match) och 1.0 (perfekt match)
+            cv.matchTemplate(src, templ, dst, cv.TM_CCOEFF_NORMED, mask);
+
+            // 4. Läs inställd känslighet från slidern (t.ex 0.70)
+            const threshold = parseFloat(document.getElementById('thresholdSlider').value) / 100;
+
+            // 5. Scanna igenom resultatmatrisen efter områden med högre poäng än vårt tröskelvärde
+            for (let row = 0; row < dst.rows; row++) {
+                for (let col = 0; col < dst.cols; col++) {
+                    let score = dst.data32F[row * dst.cols + col]; // Hämta matchningspoäng för denna pixel
+                    
+                    if (score > threshold) {
+// Räkna ut mittenkoordinaten för träffenlet 
+matchX = col + target.size / 2;let matchY = row + target.size / 2;
+// Förhindra att vi lägger symboler direkt på varandra (Non-maximum suppression light)
+let forNära = placedSymbols.some(s => Math.hypot(s.x - matchX, s.y - matchY) < target.size * 0.6);
+if (!forNära) {placedSymbols.push({x: matchX,y: matchY,type: target.type,size: target.size});}}}}
+// 6. Frigör OpenCV-minne (Viktigt i JavaScript för att undvika minnesläckor)
+src.delete(); templ.delete(); dst.delete(); mask.delete();
+// Rita upp det nya 
+resultatetdrawEverything();alert("Skanning klar! Hittade nya matchningar.");});
+// Ritfunktionfunction 
+drawEverything() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (bgImage && showBackground) 
+    {ctx.drawImage(bgImage, 0, 0);} 
+    else {ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, canvas.width, canvas.height);}
+    
+    if (!bgImage) 
+    {ctx.fillStyle = '#888'; ctx.font = '20px Arial'; 
+    ctx.textAlign = 'center';
+    ctx.fillText('Ladda upp en suddig mönsterbild för att starta!', 
+    canvas.width / 2, canvas.height / 2);return;
+    }
+    // Rita sparade/hittade 
+    symbolerplacedSymbols.forEach((sym, index) => 
+    {const svgImg = loadedSvgImages[sym.type];
+        if (svgImg) 
+        {ctx.save();ctx.translate(sym.x, sym.y);
+            ctx.drawImage(svgImg, -sym.size / 2, -sym.size / 2, sym.size, sym.size);
+            // Markera den senaste valda mallen med en blå indikator
+            if (index === placedSymbols.length - 1 && showBackground)
+             {ctx.strokeStyle = '#007bff'; ctx.lineWidth = 3;ctx.strokeRect(-sym.size/2 - 2, -sym.size/2 - 2, sym.size + 4, sym.size + 4);}
+             ctx.restore();}});
+    }
+ // Export till PNG
+document.getElementById('exportBtn').addEventListener('click', 
+function() {const link = document.createElement('a');
+link.download = 'ai-igenkant-virkmönster.png';link.href = canvas.toDataURL('image/png');
+link.click();});
+/*### Hur OpenCV-kodblocket fungerar under huven:
+1. **`cv.imread()`**: Tar data från HTML5-canvasen och konverterar pixlarna till en OpenCV-matris (`Mat`) som algoritmerna kan förstå.
+2. **`cv.matchTemplate(..., cv.TM_CCOEFF_NORMED)`**: Det magiska steget. Den "glider" din referenssymbol över hela bilden som ett förstoringsglas och beräknar en procentsats (0.0 till 1.0) för hur väl pixlarna stämmer överens.
+3. **`dst.data32F`**: Läser ut resultatet från skanningen. Om poängen på en specifik koordinat är högre än värdet på din känslighets-slider (t.ex. `0.70`), räknas det som en träff.
+4. **Minnesrensning (`.delete()`)**: Eftersom OpenCV är skrivet i C++ i botten rensar JavaScript inte minnet automatiskt för dessa objekt. Vi anropar därför `.delete()` i slutet av funktionen för att förhindra att webbläsaren kraschar eller blir långsam.
+
+### Tips för bästa resultat:
+* **Scan-känslighet:** Om bilden är *väldigt* suddig, sänk känsligheten (slidern) mot t.ex. `0.60`. Om appen hittar för många falska symboler på tomma ställen, höj känsligheten mot `0.80`.
+* **Exakt beskärning:** När du klickar ut din första referenssymbol, försök att pricka så exakt i mitten av den suddiga symbolen som möjligt, och anpassa storleks-slidern så att rutan matchar symbolens storlek i diagrammet.
+
+<FollowUp>
+Vill du bygga ut OpenCV-skannern så att den även **testar att rotera mallen automatiskt** i bakgrunden (ifall virksymbolerna i ditt diagram är svängda i en cirkel)?
+</FollowUp>*/
+
+    </script>
+</body>
+</html>

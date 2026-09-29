@@ -81,6 +81,12 @@ small {
     font-size: 80%
 }
 
+canvas {
+    border: 2px solid #333;
+    background-color: #f0f0f0;
+    cursor: crosshair;
+}
+
 sub,
 sup {
     position: relative;
@@ -221,23 +227,27 @@ td,
 th {
     padding: 0
 }
-p   img {
-        max-width:120px !important;
-         max-height:120px !important
-    }
-    /* Bakgrunden som täcker hela skärmen */
+
+p img {
+    max-width: 120px !important;
+    max-height: 120px !important
+}
+
+/* Bakgrunden som täcker hela skärmen */
 .modal-backdrop {
-    display: none; 
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Något mörkare för bättre kontrast när bilden är stor */
-    z-index: 9999; 
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Något mörkare för bättre kontrast när bilden är stor */
+    z-index: 9999;
     justify-content: center;
     align-items: center;
-    padding: 0; /* Borttagen padding för att ge bilden maximal plats */
+    padding: 0;
+    /* Borttagen padding för att ge bilden maximal plats */
     box-sizing: border-box;
 }
 
@@ -245,17 +255,22 @@ p   img {
 .modal-content {
     width: auto;
     height: auto;
-    max-width: 98%;   /* Tillåter bilden att sträcka sig nästan helt ut till sidorna */
-    max-height: 98vh; /* Tillåter bilden att ta upp nästan hela skärmhöjden */
-    object-fit: contain; /* Bevarar bildens proportioner utan att beskära den */
+    max-width: 98%;
+    /* Tillåter bilden att sträcka sig nästan helt ut till sidorna */
+    max-height: 98vh;
+    /* Tillåter bilden att ta upp nästan hela skärmhöjden */
+    object-fit: contain;
+    /* Bevarar bildens proportioner utan att beskära den */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
-    animation: zoomIn 0.2s ease-out; 
- 
+    animation: zoomIn 0.2s ease-out;
+
 }
-.modal-content   img{
-        width: 80%;
-        height: auto;
-    }
+
+.modal-content img {
+    width: 80%;
+    height: auto;
+}
+
 /* Stängknappen (X) – Flyttad så den ligger snyggt ovanpå bilden om det behövs */
 .modal-close {
     position: absolute;
@@ -267,8 +282,10 @@ p   img {
     cursor: pointer;
     transition: 0.2s;
     user-select: none;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.8); /* Lägger till skugga så krysset syns även mot ljusa bilder */
-    z-index: 10000; /* Ligger garanterat ovanpå bilden */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    /* Lägger till skugga så krysset syns även mot ljusa bilder */
+    z-index: 10000;
+    /* Ligger garanterat ovanpå bilden */
 }
 
 .modal-close:hover {
@@ -278,8 +295,15 @@ p   img {
 
 /* Enkel zoom-animation */
 @keyframes zoomIn {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @media print {
@@ -327,7 +351,7 @@ p   img {
         page-break-inside: avoid
     }
 
-   
+
 
     p,
     h2,
@@ -3416,28 +3440,40 @@ input[type="checkbox"]:focus {
     line-height: 1.42857143;
     color: #555
 }
-td #output{
-    vertical-align:top;
+
+td #output {
+    vertical-align: top;
 }
-#nav_back{color: #337ab7;}
-#tr_output{height: 80%;}
- #goback{
-  vertical-align:bottom;
-   text-align: right;
-   width: 30px;
-   height: 30px;
+
+#nav_back {
+    color: #337ab7;
 }
-#goback img { width: 30px  ;
-   height: auto; 
+
+#tr_output {
+    height: 80%;
+}
+
+#goback {
+    vertical-align: bottom;
+    text-align: right;
+    width: 30px;
+    height: 30px;
+}
+
+#goback img {
+    width: 30px;
+    height: auto;
     border: 1px solid #888;
     box-shadow: 0 0 5px #888;
-} 
-  /* CSS för att säkerställa att markeringen blir snygg och gul */
-        mark {
-            background-color: yellow;
-            color: black;
-            font-weight: bold;
-        }
+}
+
+/* CSS för att säkerställa att markeringen blir snygg och gul */
+mark {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
 .form-control {
     display: block;
     width: 100%;
@@ -10879,7 +10915,7 @@ footer p {
 }
 
 @media all and (max-width:767px) {
- 
+
 
     #toolbarHorizontal,
     #toolbarHorizontalMobile {
@@ -12817,32 +12853,35 @@ footer p {
     margin-top: 5px;
     font-size: 12px
 }
+
 /* Grundstil för sidopanelen (dold som standard) */
 #sidebar {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: lightgray ;
-  opacity: 0.7;
-  padding-top: 60px;
-  transition: transform 0.3s ease; /* Gör animationen mjuk */
-  transform: translateX(-100%);   /* Gömmer panelen till vänster */
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: lightgray;
+    opacity: 0.7;
+    padding-top: 60px;
+    transition: transform 0.3s ease;
+    /* Gör animationen mjuk */
+    transform: translateX(-100%);
+    /* Gömmer panelen till vänster */
 }
 
 /* Stil för länkarna i panelen */
 #sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #fff;
-  display: block;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
 }
 
 /* Klassen som läggs till med JS för att visa panelen */
 #sidebar.open {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 @media(hover:hover) and (pointer:fine) {
