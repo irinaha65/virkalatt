@@ -1,37 +1,70 @@
-let maskar = [
+const maskar = [
   {
-    svg_g: `<svg xmlns="http://w3.org" preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width:23px; height: 23px;">
+    svg_g: `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width:23px; height: 23px;">
     <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;
-    stroke-linejoin:round;stroke-miterlimit:1.5">`,
+    stroke-linejoin:round;stroke-miterlimit:1.5">
+
+
+         <ellipse cx="256" cy="256" rx="240.655" ry="113.285" style="fill:none;stroke:#000;stroke-width:30px"> </ellipse>
+
+    </g>
+</svg>`,
     name: 'Luftmaska',
     abbr: 'ch',
     desc: 'chain'
   },
   {
-    svg_g: ' <ellipse cx="256" cy="256" rx="240.655" ry="113.285" style="stroke:#000;stroke-width:30px"></ellipse> ',
+    svg_g: ` <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width:23px; height: 23px;">
+    <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;
+    stroke-linejoin:round;stroke-miterlimit:1.5">
+
+
+         <ellipse cx="256" cy="256" rx="240.655" ry="113.285" style="stroke:#000;stroke-width:30px"></ellipse> 
+    </g>
+</svg> `,
     abbr: 'sl st',
     name: 'Smygmaska',
     desc: 'smygmaska'
   },
   {
-    svg: ` <path d="M15.216 496.784 496.784 15.216m-481.568 0 481.568 481.568"
-    style="fill:none;stroke:#000;stroke-width:30px"> </path> `,
+    svg_g: `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width:23px; height: 23px;">
+    <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;
+    stroke-linejoin:round;stroke-miterlimit:1.5">
+
+
+         <path d="M15.216 496.784 496.784 15.216m-481.568 0 481.568 481.568" style="fill:none;stroke:#000;stroke-width:30px"> </path> 
+    </g>
+</svg> `,
     abbr: 'sc',
     desc: 'single_crochet',
     name: 'Fast maska '
   },
   {
-    svg: ` <path d="M106 15.122h300m-150 0v481.756" style="fill:none;stroke:#000;stroke-width:30px">
- </path>`,
+    svg_g: ` <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width:23px; height: 23px;">
+    <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;
+    stroke-linejoin:round;stroke-miterlimit:1.5">
+
+
+         <path d="M106 15.122h300m-150 0v481.756" style="fill:none;stroke:#000;stroke-width:30px">
+ </path>
+    </g>
+</svg>`,
 
     abbr: 'hdc',
     desc: 'Halvstolpe',
     name: 'Halvstolpe'
   },
   {
-    svg: ` <path d="M106 15.122h300M178.049 173.465l155.902 90.01M256 15.122v481.756"
-    style="fill:none;stroke:#000;stroke-width:30px">
+    svg_g: ` <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width:23px; height: 23px;">
+    <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;
+    stroke-linejoin:round;stroke-miterlimit:1.5">
+
+
+         <path d="M106 15.122h300M178.049 173.465l155.902 90.01M256 15.122v481.756" style="fill:none;stroke:#000;stroke-width:30px">
 </path>
+
+    </g>
+</svg>
 `,
 
     abbr: 'dc',
@@ -39,42 +72,36 @@ let maskar = [
     name: 'Stolpe'
   },
   {
-    svg: ` <path d="M106 15.122h300M178.049 133.455l155.902 90.01m-155.902 0 155.902 90.01M256 15.122v481.756"
-    style="fill:none;stroke:#000;stroke-width:30px">
+    svg_g: ` <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width:23px; height: 23px;">
+    <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;
+    stroke-linejoin:round;stroke-miterlimit:1.5">
+
+
+         <path d="M106 15.122h300M178.049 133.455l155.902 90.01m-155.902 0 155.902 90.01M256 15.122v481.756" style="fill:none;stroke:#000;stroke-width:30px">
 </path>
+
+    </g>
+</svg>
 `,
     abbr: 'trc',
     desc: 'Dubbelstolpe',
     name: 'Dubbelstolpe'
   },
   {
-    svg: ` <path
-    d="M106 15.122h300M178.049 83.455l155.902 90.01m-155.902 0 155.902 90.01m-155.902 0 155.902 90.01M256 15.122v481.756"
-    style="fill:none;stroke:#000;stroke-width:30px">
-      </path> `,
+    svg_g: `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width:23px; height: 23px;">
+    <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;
+    stroke-linejoin:round;stroke-miterlimit:1.5">
+
+
+         <path d="M106 15.122h300M178.049 83.455l155.902 90.01m-155.902 0 155.902 90.01m-155.902 0 155.902 90.01M256 15.122v481.756" style="fill:none;stroke:#000;stroke-width:30px">
+      </path> 
+    </g>
+</svg> `,
     abbr: 'dtrc',
     desc: 'Tredubbel_stolpe',
     name: 'Trippel stolpe'
   },
 
-  {
-    svg: `   <path d="m256 446.011 512-380m-512 0v380m57.5-380h-115m627 0h-115m-512 76.32 115 52.52m261.12-52.52 115 52.52"
-         style="fill:none;stroke:#000;stroke-width:24px"></path>
-    ` , width: 46,
-    abbr: '2dc lr',
-    desc: '2d_lr',
-    name: 'Högerlutande ökning med 2 stolpar i samma maska'
-  },
-  {
-    svg: ` <path  d="m256 66.011 512 380m0-380v380m57.5-380h-115m-397 0h-115m512 76.32 115 52.52M327.91 181.908l128.451-26.634"
-                                                                    style="fill:none;stroke:#000;stroke-width:24px">
-                                                                </path>`
-    ,
-    abbr: '2dc ll', width: 46,
-    desc: '2d_ll',
-    name: 'Vänsterlutande ökning med 2 stolpar i samma maska '
-  }
-  ,
   /* {
      svg: `  <path d="m50 380 1024-380m-1024 380 512-380m-512 0v380m57.5-380h-115m627 0h-115m627 0h-115m-1024 76.32 115 52.52m628.12-52.52 115 52.52m-484-52.52 115 52.52" style="fill:none;stroke:#000;stroke-width:24px"></path>
     
@@ -99,8 +126,7 @@ let maskar = [
      name: '3 dc in same stitch, leaning left '
    },*/
   {
-    svg: `  `
-    , svg_g: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" 
+    svg_g: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" 
     width="23px" height="23px"
   viewBox="0 0 23.000029 23.00001" version="1.1" id="svg1" xml:space="preserve">
   <defs id="defs1" />

@@ -1,4 +1,35 @@
-let maskar = [{
+let maskar = [
+  {
+    svg_g: `<svg xmlns="http://w3.org" preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width:46px; height: 23px;">
+    <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;
+    stroke-linejoin:round;stroke-miterlimit:1.5">
+
+
+           <path d="m256 446.011 512-380m-512 0v380m57.5-380h-115m627 0h-115m-512 76.32 115 52.52m261.12-52.52 115 52.52" style="fill:none;stroke:#000;stroke-width:24px"></path>
+    
+    </g>
+</svg>
+    ` , width: 46,
+    abbr: '2dc lr',
+    desc: '2d_lr',
+    name: 'Högerlutande ökning med 2 stolpar i samma maska'
+  },
+  {
+    svg_g: ` <svg xmlns="http://w3.org" preserveAspectRatio="xMidYMid meet" class="symbolIcon" viewBox="-76.8 -76.8 665.6 665.6" fill="#000" style="display: block; box-sizing: content-box; background: rgb(255, 255, 255); width:46px; height: 23px;">
+    <g style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;
+    stroke-linejoin:round;stroke-miterlimit:1.5">
+
+
+         <path d="m256 66.011 512 380m0-380v380m57.5-380h-115m-397 0h-115m512 76.32 115 52.52M327.91 181.908l128.451-26.634" style="fill:none;stroke:#000;stroke-width:24px">
+                                                                </path>
+    </g>
+</svg>`
+    ,
+    abbr: '2dc ll', width: 46,
+    desc: '2d_ll',
+    name: 'Vänsterlutande ökning med 2 stolpar i samma maska '
+  }
+  ,{
     svg: ` <path d="M106 15.122h300M106 496.654h300M256 15.122v407.227" style="fill:none;stroke:#000;stroke-width:30px">
 </path> `,
     abbr: 'hdc blo',
