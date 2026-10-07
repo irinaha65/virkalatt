@@ -91,7 +91,7 @@ searchInput.addEventListener('keydown', function (event) {
 
 let goback = document.createElement("div");
 goback.id = "goback";
-goback.innerHTML = '<img src="back-arrow.png" alt="Back Arrow" id="backArrow">';
+goback.innerHTML = '<img src="./stitches/back-arrow.png" alt="Back Arrow" id="backArrow">';
 
 let table = document.getElementById('maskar')
 let output = document.getElementById('output')
