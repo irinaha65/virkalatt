@@ -134,7 +134,7 @@ function visaMaskar() {
     })
 }
 function showDesc(doc) {
-    fetch('./maskar/' + doc)
+    fetch('./stitches/maskar/' + doc)
         .then(function (response) {
             if (!response.ok) {
                 throw new Error('Kunde inte hämta filen: ' + response.statusText)
